@@ -49,7 +49,7 @@ paginate = 10
     home = "Blog"
 
     # Metadata used to drive integrations.
-    # googleAuthorship = "Your Google+ profile ID"
+    googleAuthorship = "105121442581809102259"
     googleAnalytics = "UA-69796473-2"
     gravatarHash = "ebf5e759c2227c59a1ee8233fcccc0c4"
 
@@ -58,7 +58,7 @@ paginate = 10
     # bitbucket = "https://bitbucket.org/mantzas"
     stackOverflow = "http://stackoverflow.com/users/182740/mantzas"
     linkedin = "https://gr.linkedin.com/in/sotirismantziaris"
-    # googleplus = ""
+    # googleplus = "https://plus.google.com/105121442581809102259"
     # facebook = ""
     twitter = "https://twitter.com/SMantziaris"
     # youtube = ""
