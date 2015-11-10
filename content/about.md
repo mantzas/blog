@@ -9,7 +9,7 @@ menu = "main"
 My name is Sotirios Mantziaris (Greek: Σωτήρης Μαντζιάρης).  
 I am a software engineer and live and work in Athens, Greece.
 
-I work mostly in the Microsoft .Net Framework Stack but i am exploring everything interesting like [Go](https://golang.org/) lately.  
+I use mostly the Microsoft .Net Framework Stack but i am exploring everything interesting like [Go](https://golang.org/) lately.  
 I consider myself mostly a back-end engineer, but i had my fair share of front end development in:
 
 * Windows Desktop (WinForms, WPF) 	
