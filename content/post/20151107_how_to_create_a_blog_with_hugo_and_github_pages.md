@@ -74,7 +74,7 @@ After our initial commit we can now generate more content and publish it (Step 5
 
 ### 7. (Optional) Setup sub domain to point to blog
 
-Let's assume you have a sub domain `blog.domain.com`. The only thing you need to do is to setup a CNAME entry in your DNS configuration and point it to `{username}.github.io`.
+Let's assume you have a sub domain `blog.domain.com`. The only thing you need to do is to setup a CNAME entry in your DNS configuration and point it to `{username}.github.io`, add a file with name `CNAME` and content `blog.domain.com` to the root folder of the repository created in step 2, commit and you're done.
 
 ### Conclusion
 
