@@ -2,6 +2,7 @@
 cd mantzas.github.io
 
 echo pull changes from mantzas.github.io
+git checkout master
 git pull origin master
 cd ..
 
