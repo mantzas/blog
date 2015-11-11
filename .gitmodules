@@ -1,6 +1,3 @@
-[submodule "themes/hyde-x"]
-	path = themes/hyde-x
-	url = https://github.com/zyro/hyde-x.git
 [submodule "mantzas.github.io"]
 	path = mantzas.github.io
 	url = https://github.com/mantzas/mantzas.github.io.git
