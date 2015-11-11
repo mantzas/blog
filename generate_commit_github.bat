@@ -16,4 +16,5 @@ git push origin master
 cd ..
 
 echo push blog to github
+git remote add github https://github.com/mantzas/blog.git
 git push github master
