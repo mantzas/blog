@@ -62,7 +62,7 @@ Please refer to [Hugo's](https://gohugo.io/) documentation for generating conten
 When we are ready to deploy our blog we do the following:
 
 * Execute `hugo -d {path}`, where path is the cloned repository path from step 2
-* `cd` into the above path
+* `cd` into the above path 1
 * Execute `git add .`
 * Execute `git commit -m "initial commit"`
 * Execute `git push origin master`
