@@ -9,7 +9,7 @@ cd ../blog
 
 echo generate blog with hugo
 hugo -d ../mantzas.github.io
-cd mantzas.github.io
+cd ../mantzas.github.io
 
 echo add, commit and push to mantzas.github.io
 git add .
