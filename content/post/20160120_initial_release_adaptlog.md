@@ -1,8 +1,8 @@
 +++
-categories = ["go", "logging", "logging", "package"]
+categories = ["go", "logging", "logging", "library"]
 date = "2016-01-20T00:44:10+02:00"
-description = "Releasing new go logging package named adaptlog"
-keywords = ["go", "log", "logging", "package"]
+description = "Releasing new go logging library named adaptlog"
+keywords = ["go", "log", "logging", "library"]
 title = "Initial release of adaptlog"
 
 +++
