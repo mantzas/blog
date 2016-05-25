@@ -6,7 +6,9 @@ keywords = ["blog", "hugo", "github pages", "domain"]
 title = "Setup a blog with Hugo and Github Pages"
 
 +++
-### Intro
+
+# Intro
+
 It was long my desire to write a blog with stuff that interests me.  
 Lately i was studying [Golang](https://golang.org/) and i came across [Hugo](https://gohugo.io/) which is a really nice and fast site generation utility.  
 This was a great opportunity to start my own blog by using [Hugo](https://gohugo.io/) and [Github Pages](https://pages.github.com/) in order to host it. Why?

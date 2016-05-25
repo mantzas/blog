@@ -6,7 +6,8 @@ keywords = ["go", "log", "logging", "library"]
 title = "Initial release of adaptlog"
 
 +++
-### adaptlog, a logging abstraction for go
+
+# adaptlog, a logging abstraction for go
 
 Almost every application logs data one way or another. There are a plethora of logging packages available for [golang](https://golang.org/).  
 

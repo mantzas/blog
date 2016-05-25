@@ -7,7 +7,7 @@ title = "New go event sourcing library named incata"
 
 +++
 
-### incata, a event sourcing library for go
+# incata, a event sourcing library for go
 
 Event sourcing is capturing all changes of an application state as a sequence of events.
 Since we only store events we only have to add events to a store, in contrast to updates for keeping the application state.
