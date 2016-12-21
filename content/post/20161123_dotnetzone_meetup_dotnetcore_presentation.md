@@ -1,8 +1,8 @@
 +++
-title = "dotNETZone meetup .NET core presentation"
-categories = [".Net Core", "ASP.NET Core", "Linux"]
-description = "dotNETZone meetup .presentation `Shaken to the .NET Core`"
-keywords = [".Net Core", "ASP.NET Core", "Linux"]
+title = "dotNETZone.gr meetup .NET core presentation"
+categories = ["dotnet core", "asp dotnet core", "Linux"]
+description = "dotNETZone.gr meetup .presentation `Shaken to the .NET Core`"
+keywords = ["dotnet core", "asp dotnet core", "Linux"]
 date = "2016-11-24T08:11:25+02:00"
 
 +++

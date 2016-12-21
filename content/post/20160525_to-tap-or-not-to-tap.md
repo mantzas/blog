@@ -1,8 +1,8 @@
 +++
-categories = [".net", "c#", "TAP", "TPL", "async-await", "ASP.NET"]
+categories = ["dotnet", "csharp", "TAP", "TPL", "async-await", "asp dotnet"]
 date = "2016-05-25T21:35:00+03:00"
 description = "Ramblings on Tasks, async-await, ASP.NET​"
-keywords = [".net", "c#", "TAP", "TPL", "async-await", "ASP.NET"]
+keywords = ["dotnet", "csharp", "TAP", "TPL", "async-await", "asp dotnet"]
 title = "To TAP or not to TAP"
 
 +++
