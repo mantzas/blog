@@ -1,5 +1,5 @@
 +++
-title = "Breaking the circuit"
+title = "Tripping the circuit"
 categories = ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
 description = "Circuit Breaker pattern implementation in go and c#"
 keywords = ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]

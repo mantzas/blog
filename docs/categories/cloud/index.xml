@@ -9,11 +9,11 @@
     <atom:link href="http://blog.mantziaris.eu/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Breaking the circuit</title>
-      <link>http://blog.mantziaris.eu/blog/2017/01/06/breaking-the-circuit/</link>
+      <title>Tripping the circuit</title>
+      <link>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2017/01/06/breaking-the-circuit/</guid>
+      <guid>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
       <description>
 
 &lt;h1 id=&#34;circuit-breaker-pattern&#34;&gt;Circuit breaker pattern&lt;/h1&gt;
