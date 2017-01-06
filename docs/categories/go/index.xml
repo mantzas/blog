@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Coding Odyssey</title>
+    <link>http://blog.mantziaris.eu/categories/go/index.xml</link>
+    <description>Recent content in Go on Coding Odyssey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://blog.mantziaris.eu/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Breaking the circuit</title>
+      <link>http://blog.mantziaris.eu/blog/2016/12/28/breaking-the-circuit/</link>
+      <pubDate>Wed, 28 Dec 2016 14:11:25 +0200</pubDate>
+      
+      <guid>http://blog.mantziaris.eu/blog/2016/12/28/breaking-the-circuit/</guid>
+      <description>
+
+&lt;h1 id=&#34;circuit-breaker-pattern&#34;&gt;Circuit breaker pattern&lt;/h1&gt;
+
+&lt;p&gt;This is probably one of the most useful &amp;ldquo;cloud&amp;rdquo; patterns out there and it is fairly easy to implement.&lt;br /&gt;
+There are great articles already on the internet about this pattern so why another one?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Κρείττον οψιμαθή είναι ή αμαθή.
+Socrates 469-399 BC., Philosopher
+
+Better too have learned lately than never, as he tried to explain why he learned to play 
+guitar in his old age.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I for myself have learned better by reading, implementing and writing about something.&lt;/p&gt;
+
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+
+&lt;p&gt;Almost every application does communicates with other services or resources, and they fail&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;The reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;slow network connections&lt;/li&gt;
+&lt;li&gt;timeouts&lt;/li&gt;
+&lt;li&gt;the resources being over-committed or temporarily unavailable&lt;/li&gt;
+&lt;li&gt;buggy release&lt;/li&gt;
+&lt;li&gt;etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When this happen our system becomes unstable, unreliable, brittle and failures cascade.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s go with an example of a failing remote service, let&amp;rsquo;s say a timeout after 60sec.
+What happens in our application?
+The current request takes up resources in order to make the call and blocks (or awaits) for 60sec.&lt;br /&gt;
+All requests for the same service will suffer the same fate.&lt;br /&gt;
+All clients that call our service fail the same way.&lt;br /&gt;
+The failure cascades.&lt;br /&gt;
+The response times go through the roof.
+The perfect storm is about to form.&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Using a circuit breaker can improve the stability and resilience of our application.
+The circuit is actually a state machine with 3 states&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Closed, meaning the execution will proceed&lt;/li&gt;
+&lt;li&gt;Open, meaning the execution will not proceed and throw a exception or return an error&lt;/li&gt;
+&lt;li&gt;Half-Open, meaning that some executions are allowed in order to check the remote service
+and reset the circuit if it succeeds&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;benefits&#34;&gt;Benefits&lt;/h2&gt;
+
+&lt;p&gt;By using a circuit breaker we have the following benefits:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fail in a controlled manner&lt;/li&gt;
+&lt;li&gt;Fail fast&lt;/li&gt;
+&lt;li&gt;Maintain response times&lt;/li&gt;
+&lt;li&gt;Handle failures differently when circuit open like
+
+&lt;ul&gt;
+&lt;li&gt;Redirect to another resources&lt;/li&gt;
+&lt;li&gt;Save for later retry&lt;/li&gt;
+&lt;li&gt;etc&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+
+&lt;p&gt;There are two implementation of the circuit breaker.
+They share the same philosophy but are written in C# and Go.
+Both implementations have a setting provider interface which can be implemented
+in order to get the settings from anywhere. There is a in-memory settings implementation which
+holds the settings in memory.
+Both implementation are key based which means that for every key
+the implementation provides a separate circuit which is actually the state.
+The following setting exist for each key:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Failure Threshold at which the circuit opens&lt;/li&gt;
+&lt;li&gt;Retry Timeout defines after how much time after the circuit trips will the state be half-open&lt;/li&gt;
+&lt;li&gt;Retry Success Threshold defines after how many successful retries will the circuit reset and Closed&lt;/li&gt;
+&lt;li&gt;Max Retry Execution Threshold defines how many retries are allowed in the half-open state&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The C# implementation can be found @ &lt;a href=&#34;https://github.com/mantzas/clouddotnet&#34;&gt;clouddotnet&lt;/a&gt;.
+The implementation is a generic, asynchronous and thread safe.&lt;br /&gt;
+The Go implementation can be found @ &lt;a href=&#34;https://github.com/mantzas/gocloud&#34;&gt;gocloud&lt;/a&gt;.
+The implementation is idiomatic and thread safe.&lt;/p&gt;
+
+&lt;h3 id=&#34;diffs&#34;&gt;Diffs&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Since Go does not have generics the action to be executed returns a interface and a error&lt;/li&gt;
+&lt;li&gt;The benchmark for the C# implementation results in 355ns/operation&lt;/li&gt;
+&lt;li&gt;The benchmark for the Go implementation results in 562ns/operation&lt;/li&gt;
+&lt;li&gt;C# is a lot faster than Go for this implementation which was not expected&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;resources&#34;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://msdn.microsoft.com/en-us/library/dn589784.aspx&#34;&gt;MSDN Circuit Breaker&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New go event sourcing library named incata</title>
+      <link>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</link>
+      <pubDate>Mon, 01 Feb 2016 19:59:22 +0200</pubDate>
+      
+      <guid>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</guid>
+      <description>
+
+&lt;h1 id=&#34;incata-a-event-sourcing-library-for-go&#34;&gt;incata, a event sourcing library for go&lt;/h1&gt;
+
+&lt;p&gt;Event sourcing is capturing all changes of an application state as a sequence of events.
+Since we only store events we only have to add events to a store, in contrast to updates for keeping the application state.
+A much simpler model that scales very well. When needing the application state we just aggregate the events into&lt;/p&gt;
+
+&lt;p&gt;More on this can be read all over the internet but two excellent links are available below:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://martinfowler.com/eaaDev/EventSourcing.html&#34;&gt;Martin Fowler Event Sourcing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://docs.geteventstore.com/introduction/event-sourcing-basics/&#34;&gt;Event Sourcing Basics by Event Store&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The library has support for the following RDBMS&amp;rsquo;s:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Microsoft SQL Server&lt;/li&gt;
+&lt;li&gt;PostgreSQL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mantzas/incata&#34;&gt;incata&lt;/a&gt; is very easy to setup and to use like illustrated on the github page.
+Any ideas or improvements are highly welcome. Enjoy!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Initial release of adaptlog</title>
+      <link>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
+      <pubDate>Wed, 20 Jan 2016 00:44:10 +0200</pubDate>
+      
+      <guid>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
+      <description>
+
+&lt;h1 id=&#34;adaptlog-a-logging-abstraction-for-go&#34;&gt;adaptlog, a logging abstraction for go&lt;/h1&gt;
+
+&lt;p&gt;Almost every application logs data one way or another. There are a plethora of logging packages available for &lt;a href=&#34;https://golang.org/&#34;&gt;golang&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is the one that comes with the standard packages which takes a simple approach.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;There are many logging packages that follow the well established leveled approach, and there are really a lot of them.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The decision of choosing a specific library comes with the cost of a direct dependency.
+But why should we depend directly on a specific package?
+How painful is it to exchange a logging package for another when we already created a lot of code with a direct dependency?&lt;br /&gt;
+This is the reason why &lt;a href=&#34;https://github.com/mantzas/adaptlog&#34;&gt;apaptlog&lt;/a&gt; came to life.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mantzas/adaptlog&#34;&gt;apaptlog&lt;/a&gt; is just a logging abstraction, which itself does not implement any log related stuff.
+A logger has to be provided by the developer using any of the previous mentioned logging packages or any custom implementation.
+The developer has to implement only a logging interface (standard or leveled), configure it at application start and use the abstraction throughout the code.
+This is hardly something new. There are many libraries in other languages that do exactly this.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mantzas/adaptlog&#34;&gt;apaptlog&lt;/a&gt; is very easy to setup and to use. Follow the sample for the standard logger implementation.
+Any ideas or improvements are highly welcome. Enjoy!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

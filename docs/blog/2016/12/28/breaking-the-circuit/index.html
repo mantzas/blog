@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Breaking the circuit &middot; Sotirios Mantziaris</title>
+
+  
+  <link rel="stylesheet" href="http://blog.mantziaris.eu/css/poole.css">
+  <link rel="stylesheet" href="http://blog.mantziaris.eu/css/hyde.css">
+  <link rel="stylesheet" href="http://blog.mantziaris.eu/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://blog.mantziaris.eu/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://blog.mantziaris.eu/css/hyde-x.css">
+  <link rel="stylesheet" href="http://blog.mantziaris.eu/css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://blog.mantziaris.eu/touch-icon-144-precomposed.png">
+  <link href="http://blog.mantziaris.eu/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Circuit Breaker pattern implementation in go and c#">
+  <meta name="keywords" content="pattern,cloud,design,dotnet,go,csharp">
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-69796473-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+</head>
+<body>
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <img src="https://www.gravatar.com/avatar/ebf5e759c2227c59a1ee8233fcccc0c4?s=200"
+             alt="gravatar" title="Sotirios Mantziaris">
+      <h1>Sotirios Mantziaris</h1>
+      <p class="lead">Coding Odyssey</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://blog.mantziaris.eu/">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="http://blog.mantziaris.eu/about/">About Me</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/mantzas"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      <a href="http://stackoverflow.com/users/182740/mantzas"><i class="fa fa-stack-overflow fa-3x"></i></a>
+      <a href="https://gr.linkedin.com/in/sotirismantziaris"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="https://twitter.com/SMantziaris"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      <a href="http://blog.mantziaris.eu/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2017 <a href="http://blog.mantziaris.eu/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Breaking the circuit</h1>
+    <span class="post-date">Dec 28, 2016 &middot; 3 minute read &middot; <a href="http://blog.mantziaris.eu/blog/2016/12/28/breaking-the-circuit/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="http://blog.mantziaris.eu/categories/pattern">pattern</a><a class="label" href="http://blog.mantziaris.eu/categories/cloud">cloud</a><a class="label" href="http://blog.mantziaris.eu/categories/design">design</a><a class="label" href="http://blog.mantziaris.eu/categories/dotnet">dotnet</a><a class="label" href="http://blog.mantziaris.eu/categories/go">go</a><a class="label" href="http://blog.mantziaris.eu/categories/csharp">csharp</a>
+    </span>
+    
+
+<h1 id="circuit-breaker-pattern">Circuit breaker pattern</h1>
+
+<p>This is probably one of the most useful &ldquo;cloud&rdquo; patterns out there and it is fairly easy to implement.<br />
+There are great articles already on the internet about this pattern so why another one?</p>
+
+<pre><code>Κρείττον οψιμαθή είναι ή αμαθή.
+Socrates 469-399 BC., Philosopher
+
+Better too have learned lately than never, as he tried to explain why he learned to play 
+guitar in his old age.
+</code></pre>
+
+<p>I for myself have learned better by reading, implementing and writing about something.</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>Almost every application does communicates with other services or resources, and they fail&hellip;</p>
+
+<p>The reasons:</p>
+
+<ul>
+<li>slow network connections</li>
+<li>timeouts</li>
+<li>the resources being over-committed or temporarily unavailable</li>
+<li>buggy release</li>
+<li>etc</li>
+</ul>
+
+<p>When this happen our system becomes unstable, unreliable, brittle and failures cascade.</p>
+
+<p>Let&rsquo;s go with an example of a failing remote service, let&rsquo;s say a timeout after 60sec.
+What happens in our application?
+The current request takes up resources in order to make the call and blocks (or awaits) for 60sec.<br />
+All requests for the same service will suffer the same fate.<br />
+All clients that call our service fail the same way.<br />
+The failure cascades.<br />
+The response times go through the roof.
+The perfect storm is about to form.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>Using a circuit breaker can improve the stability and resilience of our application.
+The circuit is actually a state machine with 3 states</p>
+
+<ul>
+<li>Closed, meaning the execution will proceed</li>
+<li>Open, meaning the execution will not proceed and throw a exception or return an error</li>
+<li>Half-Open, meaning that some executions are allowed in order to check the remote service
+and reset the circuit if it succeeds</li>
+</ul>
+
+<h2 id="benefits">Benefits</h2>
+
+<p>By using a circuit breaker we have the following benefits:</p>
+
+<ul>
+<li>Fail in a controlled manner</li>
+<li>Fail fast</li>
+<li>Maintain response times</li>
+<li>Handle failures differently when circuit open like
+
+<ul>
+<li>Redirect to another resources</li>
+<li>Save for later retry</li>
+<li>etc</li>
+</ul></li>
+</ul>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>There are two implementation of the circuit breaker.
+They share the same philosophy but are written in C# and Go.
+Both implementations have a setting provider interface which can be implemented
+in order to get the settings from anywhere. There is a in-memory settings implementation which
+holds the settings in memory.
+Both implementation are key based which means that for every key
+the implementation provides a separate circuit which is actually the state.
+The following setting exist for each key:</p>
+
+<ul>
+<li>Failure Threshold at which the circuit opens</li>
+<li>Retry Timeout defines after how much time after the circuit trips will the state be half-open</li>
+<li>Retry Success Threshold defines after how many successful retries will the circuit reset and Closed</li>
+<li>Max Retry Execution Threshold defines how many retries are allowed in the half-open state</li>
+</ul>
+
+<p>The C# implementation can be found @ <a href="https://github.com/mantzas/clouddotnet">clouddotnet</a>.
+The implementation is a generic, asynchronous and thread safe.<br />
+The Go implementation can be found @ <a href="https://github.com/mantzas/gocloud">gocloud</a>.
+The implementation is idiomatic and thread safe.</p>
+
+<h3 id="diffs">Diffs</h3>
+
+<ul>
+<li>Since Go does not have generics the action to be executed returns a interface and a error</li>
+<li>The benchmark for the C# implementation results in 355ns/operation</li>
+<li>The benchmark for the Go implementation results in 562ns/operation</li>
+<li>C# is a lot faster than Go for this implementation which was not expected</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<p><a href="https://msdn.microsoft.com/en-us/library/dn589784.aspx">MSDN Circuit Breaker</a></p>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "mantzas";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "mantzas";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="http://blog.mantziaris.eu/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+
