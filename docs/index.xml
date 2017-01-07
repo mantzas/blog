@@ -130,7 +130,7 @@ The following setting exist for each key:&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;The C# implementation can be found @ &lt;a href=&#34;https://github.com/mantzas/clouddotnet&#34;&gt;clouddotnet&lt;/a&gt;.
-The implementation is generic, asynchronous and thread safe.&lt;br /&gt;
+The implementation is generic, asynchronous and thread safe and lock-free.&lt;br /&gt;
 The Go implementation can be found @ &lt;a href=&#34;https://github.com/mantzas/gocloud&#34;&gt;gocloud&lt;/a&gt;.
 The implementation is idiomatic and &amp;ldquo;goroutine&amp;rdquo; safe.&lt;/p&gt;
 

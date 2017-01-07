@@ -101,7 +101,7 @@ The following setting exist for each key:
 - Max Retry Execution Threshold defines how many retries are allowed in the half-open state
 
 The C# implementation can be found @ [clouddotnet](https://github.com/mantzas/clouddotnet).
-The implementation is generic, asynchronous and thread safe.  
+The implementation is generic, asynchronous and thread safe and lock-free.  
 The Go implementation can be found @ [gocloud](https://github.com/mantzas/gocloud).
 The implementation is idiomatic and "goroutine" safe.
 
