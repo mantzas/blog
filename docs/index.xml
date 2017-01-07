@@ -139,10 +139,6 @@ The implementation is idiomatic and &amp;ldquo;goroutine&amp;rdquo; safe.&lt;/p&
 &lt;ul&gt;
 &lt;li&gt;Since Go does not have generics the action to be executed returns a interface and a error
 so type casting is necessary&lt;/li&gt;
-&lt;li&gt;The benchmark for the C# implementation results in 355ns/op Windows, 529ns/op Linux&lt;/li&gt;
-&lt;li&gt;The benchmark for the Go implementation results in 562ns/operation Windows, 558 ns/operation Linux&lt;/li&gt;
-&lt;li&gt;C# is a lot faster than Go for this implementation on Windows which maybe expected&lt;/li&gt;
-&lt;li&gt;C# is on par with Go on Linux which is impressive&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;epilogue&#34;&gt;Epilogue&lt;/h2&gt;
