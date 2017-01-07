@@ -141,7 +141,7 @@ The implementation is idiomatic and &amp;ldquo;goroutine&amp;rdquo; safe.&lt;/p&
 so type casting is necessary&lt;/li&gt;
 &lt;li&gt;The benchmark for the C# implementation results in 355ns/op Windows, 529ns/op Linux&lt;/li&gt;
 &lt;li&gt;The benchmark for the Go implementation results in 562ns/operation Windows, 558 ns/operation Linux&lt;/li&gt;
-&lt;li&gt;C# is a lot faster than Go for this implementation on Windows which was, to be honest, not expected&lt;/li&gt;
+&lt;li&gt;C# is a lot faster than Go for this implementation on Windows which maybe expected&lt;/li&gt;
 &lt;li&gt;C# is on par with Go on Linux which is impressive&lt;/li&gt;
 &lt;/ul&gt;
 
