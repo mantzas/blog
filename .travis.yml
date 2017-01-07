@@ -1,7 +1,0 @@
-sudo: required
-language: go
-go:
-  - 1.7
-before_script:
-    - go get github.com/spf13/hugo
-script: hugo -d docs/
