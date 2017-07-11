@@ -30,7 +30,7 @@ The following code is needed in the Program Main
 
 which will scan the assembly for benchmarks and asks you which one to run.
 
-A typical benchmark is just a class with methods that are annotated with the [Benchmark] attribute like the following one:
+A typical benchmark is just a class with methods that are annotated with the `[Benchmark]` attribute like the following one:
 
     [MemoryDiagnoser]
     public class DateTimeToStringBenchmark
@@ -65,13 +65,15 @@ After the run the result is the following:
     </tbody>
 </table>
 
-I get the timings of the method and by using the [MemoryDiagnoser] attribute i get event the GC Stats.
+I get the timings of the method and by using the `[MemoryDiagnoser]` attribute i get event the GC Stats.
 
 ## Conducted Benchmarks
 
 Given the easiness to create such benchmark i have started a github repository named [DotNetBenchmarks](https://github.com/mantzas/DotNetBenchmarks).
 
 There you can find some of the performance questions that i have about some components like logging frameworks, XML Serialization, String concatenation etc.
+Every time i have to check the performance of some component i will add a new benchmark to this repository. If anyone likes to contribute, even better! 
+Make a PR!
 
 Please note that:
 
