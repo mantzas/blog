@@ -1,6 +1,6 @@
 ---
 
-title:  ".NET Benchmarks"
+title:  "Various .NET Benchmarks"
 categories: ["dotnet", "benchmarks"]
 description: "Various .NET Benchmarks"
 keywords: ["dotnet", "benchmark"]
