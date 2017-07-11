@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event Sourcing on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/event-sourcing/index.xml</link>
+    <link>http://blog.mantziaris.eu/categories/event-sourcing/</link>
     <description>Recent content in Event Sourcing on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://blog.mantziaris.eu/categories/event-sourcing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Feb 2016 19:59:22 +0200</lastBuildDate>
+    
+	<atom:link href="http://blog.mantziaris.eu/categories/event-sourcing/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>New go event sourcing library named incata</title>
@@ -14,31 +17,8 @@
       <pubDate>Mon, 01 Feb 2016 19:59:22 +0200</pubDate>
       
       <guid>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</guid>
-      <description>
-
-&lt;h1 id=&#34;incata-a-event-sourcing-library-for-go&#34;&gt;incata, a event sourcing library for go&lt;/h1&gt;
-
-&lt;p&gt;Event sourcing is capturing all changes of an application state as a sequence of events.
-Since we only store events we only have to add events to a store, in contrast to updates for keeping the application state.
-A much simpler model that scales very well. When needing the application state we just aggregate the events into&lt;/p&gt;
-
-&lt;p&gt;More on this can be read all over the internet but two excellent links are available below:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://martinfowler.com/eaaDev/EventSourcing.html&#34;&gt;Martin Fowler Event Sourcing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://docs.geteventstore.com/introduction/event-sourcing-basics/&#34;&gt;Event Sourcing Basics by Event Store&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The library has support for the following RDBMS&amp;rsquo;s:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Microsoft SQL Server&lt;/li&gt;
-&lt;li&gt;PostgreSQL&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mantzas/incata&#34;&gt;incata&lt;/a&gt; is very easy to setup and to use like illustrated on the github page.
-Any ideas or improvements are highly welcome. Enjoy!&lt;/p&gt;
-</description>
+      <description>incata, a event sourcing library for go Event sourcing is capturing all changes of an application state as a sequence of events. Since we only store events we only have to add events to a store, in contrast to updates for keeping the application state. A much simpler model that scales very well. When needing the application state we just aggregate the events into
+More on this can be read all over the internet but two excellent links are available below:</description>
     </item>
     
   </channel>

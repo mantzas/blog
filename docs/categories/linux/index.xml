@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/linux/index.xml</link>
+    <link>http://blog.mantziaris.eu/categories/linux/</link>
     <description>Recent content in Linux on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://blog.mantziaris.eu/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2016 08:11:25 +0200</lastBuildDate>
+    
+	<atom:link href="http://blog.mantziaris.eu/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>dotNETZone.gr meetup .NET core presentation</title>
@@ -14,12 +17,8 @@
       <pubDate>Thu, 24 Nov 2016 08:11:25 +0200</pubDate>
       
       <guid>http://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</guid>
-      <description>&lt;p&gt;The presentation was about the current state of .NET Core in the Linux World.
-Here are &lt;a href=&#34;http://go-talks.appspot.com/github.com/mantzas/presentations/20161106_shaken_to_the_dotnet_core/shaken_to_the_dotnet_core.slide#1&#34;&gt;the slides&lt;/a&gt; of the presentation
-and the &lt;a href=&#34;https://github.com/mantzas/presentations/tree/master/20161106_shaken_to_the_dotnet_core&#34;&gt;github repository&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Thanks for attending.&lt;/p&gt;
-</description>
+      <description>The presentation was about the current state of .NET Core in the Linux World. Here are the slides of the presentation and the github repository.
+Thanks for attending.</description>
     </item>
     
   </channel>

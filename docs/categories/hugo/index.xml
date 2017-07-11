@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/hugo/index.xml</link>
+    <link>http://blog.mantziaris.eu/categories/hugo/</link>
     <description>Recent content in Hugo on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://blog.mantziaris.eu/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2015 13:42:43 +0200</lastBuildDate>
+    
+	<atom:link href="http://blog.mantziaris.eu/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Setup a blog with Hugo and Github Pages</title>
@@ -14,97 +17,10 @@
       <pubDate>Sat, 07 Nov 2015 13:42:43 +0200</pubDate>
       
       <guid>http://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</guid>
-      <description>
-
-&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
-
-&lt;p&gt;It was long my desire to write a blog with stuff that interests me.&lt;br /&gt;
-Lately i was studying &lt;a href=&#34;https://golang.org/&#34;&gt;Golang&lt;/a&gt; and i came across &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; which is a really nice and fast site generation utility.&lt;br /&gt;
-This was a great opportunity to start my own blog by using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; and &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; in order to host it. Why?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;it&amp;rsquo;s free&lt;/li&gt;
-&lt;li&gt;it&amp;rsquo;s &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;it&amp;rsquo;s easy and fast&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is a walk through on how you can have a blog easy, fast and free! Let&amp;rsquo;s start! The only thing you need is:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;a Github Account&lt;/li&gt;
-&lt;li&gt;a Domain (optional)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;steps&#34;&gt;Steps&lt;/h3&gt;
-
-&lt;p&gt;The following steps are needed for the initial setup and creation of the blog:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; repository for source code of the blog&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; repository for the generated site&lt;/li&gt;
-&lt;li&gt;Setup &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Create blog&lt;/li&gt;
-&lt;li&gt;Publish blog to &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Generate content and publish&lt;/li&gt;
-&lt;li&gt;(Optional) Setup sub domain to point to blog&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&#34;1-github-https-github-com-repository-for-source-code-of-the-blog&#34;&gt;1. &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; repository for source code of the blog&lt;/h3&gt;
-
-&lt;p&gt;Create a repository (public or private).&lt;/p&gt;
-
-&lt;h3 id=&#34;2-github-pages-https-pages-github-com-repository-for-the-generated-site&#34;&gt;2. &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; repository for the generated site&lt;/h3&gt;
-
-&lt;p&gt;Follow the instruction on &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt; to create a repository with your Github username. Clone it to your local drive.&lt;/p&gt;
-
-&lt;h3 id=&#34;3-setup-hugo-https-gohugo-io&#34;&gt;3. Setup &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Download &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; to your local drive. Unpack it to a folder and set the path in your OS to the executable. Almost all OS are supported!!!&lt;/p&gt;
-
-&lt;h3 id=&#34;4-create-blog&#34;&gt;4. Create blog&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Create a folder for your blog source code and &lt;code&gt;cd&lt;/code&gt; into it.&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;hugo new site .&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Add as remote repository the repository created in Step 1. (&lt;code&gt;git remote add origin https://github.com/{username}/{repository}.git&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Add &lt;code&gt;.gitignore&lt;/code&gt; file to exclude the path &lt;code&gt;public/&lt;/code&gt;, which is the default directory of the generated static files&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;git push -u origin master&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please refer to &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&amp;rsquo;s&lt;/a&gt; documentation for generating content, using themes etc.&lt;/p&gt;
-
-&lt;h3 id=&#34;5-publish-blog-to-github-pages-https-pages-github-com&#34;&gt;5. Publish blog to &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;When we are ready to deploy our blog we do the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Execute &lt;code&gt;hugo -d {path}&lt;/code&gt;, where path is the cloned repository path from step 2&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd&lt;/code&gt; into the above path&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;After this we can enjoy our newly created blog under &lt;code&gt;http://{username}.github.io&lt;/code&gt; where username should be replaced with your &lt;a href=&#34;https://github.com/&#34;&gt;Github&amp;rsquo;s&lt;/a&gt; username.&lt;/p&gt;
-
-&lt;h3 id=&#34;6-generate-content-and-publish&#34;&gt;6. Generate content and publish&lt;/h3&gt;
-
-&lt;p&gt;After our initial commit we can now generate more content and publish it (Step 5).&lt;/p&gt;
-
-&lt;h3 id=&#34;7-optional-setup-sub-domain-to-point-to-blog&#34;&gt;7. (Optional) Setup sub domain to point to blog&lt;/h3&gt;
-
-&lt;p&gt;Let&amp;rsquo;s assume you have a sub domain &lt;code&gt;blog.domain.com&lt;/code&gt;. The only thing you need to do is to setup a CNAME entry in your DNS configuration and point it to &lt;code&gt;{username}.github.io&lt;/code&gt;, add a file with name &lt;code&gt;CNAME&lt;/code&gt; and content &lt;code&gt;blog.domain.com&lt;/code&gt; to the root folder of the repository created in step 2, commit and you&amp;rsquo;re done.&lt;/p&gt;
-
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;With these six (the seventh is optional) easy steps we have created a fully functional and fast blog. The cherry on top: &lt;strong&gt;for free!!!&lt;/strong&gt;&lt;br /&gt;
-(If we used public repositories in &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt;). And if we assume that almost everybody nowadays has a domain it is free even with the 7th step!&lt;/p&gt;
-
-&lt;p&gt;Happy blogging!&lt;/p&gt;
-</description>
+      <description>Intro It was long my desire to write a blog with stuff that interests me.
+Lately i was studying Golang and i came across Hugo which is a really nice and fast site generation utility.
+This was a great opportunity to start my own blog by using Hugo and Github Pages in order to host it. Why?
+ it&amp;rsquo;s free it&amp;rsquo;s Github it&amp;rsquo;s easy and fast  This is a walk through on how you can have a blog easy, fast and free!</description>
     </item>
     
   </channel>

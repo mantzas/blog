@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://blog.mantziaris.eu/blog/2017/07/11/.net-benchmarks/</loc>
+    <lastmod>2017-07-11T07:36:33+03:00</lastmod>
+  </url>
   
   <url>
     <loc>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</loc>
@@ -65,6 +71,12 @@
   </url>
   
   <url>
+    <loc>http://blog.mantziaris.eu/categories/benchmarks/</loc>
+    <lastmod>2017-07-11T07:36:33+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.mantziaris.eu/categories/blog/</loc>
     <lastmod>2015-11-07T13:42:43+02:00</lastmod>
     <priority>0</priority>
@@ -72,6 +84,7 @@
   
   <url>
     <loc>http://blog.mantziaris.eu/categories/</loc>
+    <lastmod>2016-05-25T21:35:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -83,7 +96,7 @@
   
   <url>
     <loc>http://blog.mantziaris.eu/</loc>
-    <lastmod>2017-01-06T13:11:25+02:00</lastmod>
+    <lastmod>2017-07-11T07:36:33+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -113,7 +126,7 @@
   
   <url>
     <loc>http://blog.mantziaris.eu/categories/dotnet/</loc>
-    <lastmod>2017-01-06T13:11:25+02:00</lastmod>
+    <lastmod>2017-07-11T07:36:33+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -179,7 +192,7 @@
   
   <url>
     <loc>http://blog.mantziaris.eu/post/</loc>
-    <lastmod>2017-01-06T13:11:25+02:00</lastmod>
+    <lastmod>2017-07-11T07:36:33+03:00</lastmod>
     <priority>0</priority>
   </url>
   
