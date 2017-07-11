@@ -1,6 +1,6 @@
 ---
 
-title:  ".NET Benchmarks"
+title:  "NET Benchmarks"
 categories: ["dotnet", "benchmarks"]
 description: "Circuit Breaker pattern implementation in go and c#"
 keywords: ["dotnet", "benchmark"]
