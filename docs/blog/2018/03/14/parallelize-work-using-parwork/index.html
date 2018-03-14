@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>Various .NET Benchmarks &middot; Sotirios Mantziaris</title>
+  <title>Parallelize work using parwork &middot; Sotirios Mantziaris</title>
 
   
   <link rel="stylesheet" href="http://blog.mantziaris.eu/css/poole.css">
@@ -29,8 +29,8 @@
   
   
 
-  <meta name="description" content="Various .NET Benchmarks">
-  <meta name="keywords" content="dotnet,benchmark">
+  <meta name="description" content="Parallelize work using the parwork package">
+  <meta name="keywords" content="parallel,go,fork-join">
   
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -84,93 +84,86 @@
 
 <div class="content container">
   <div class="post">
-    <h1 class="post-title">Various .NET Benchmarks</h1>
-    <span class="post-date">Jul 11, 2017 &middot; 2 minute read &middot; <a href="http://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/#disqus_thread">Comments</a>
+    <h1 class="post-title">Parallelize work using parwork</h1>
+    <span class="post-date">Mar 14, 2018 &middot; 3 minute read &middot; <a href="http://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/#disqus_thread">Comments</a>
     
     <br/>
-    <a class="label" href="http://blog.mantziaris.eu/categories/dotnet">dotnet</a><a class="label" href="http://blog.mantziaris.eu/categories/benchmarks">benchmarks</a>
+    <a class="label" href="http://blog.mantziaris.eu/categories/parallel">parallel</a><a class="label" href="http://blog.mantziaris.eu/categories/go">go</a><a class="label" href="http://blog.mantziaris.eu/categories/fork-join">fork-join</a>
     </span>
     
 
-<h1 id="net-benchmarks">.NET Benchmarks</h1>
+<p>In order to process a lot of work we have to parallelize work across all cores, and especially if it&rsquo;s CPU bound.
+Go has goroutines, which can be used to parallelize the work, but there is the cost of context switching for a lot of goroutines.
+Minimizing this context switching can be achieved by using a fork-join model when processing work.</p>
 
-<p>A lot of times i was wondering what is the best performing code.
-In order to determine that i had to benchmark my code, but benchmarks are hard to write.
-Luckily there is a open source project that does this work perfectly good and very easy.</p>
-
-<p>The name of the library is BenchmarkDotNet and the documentation can be found <a href="http://benchmarkdotnet.org/">here</a>.
-The only thing you have to do is:</p>
+<p><a href="https://github.com/mantzas/parwork">Parwork</a> solves this problem by using goroutines, channels and waitgroups. It creates workers (goroutines) that pull
+work of a queue (channel), process the work and report the work back to a queue (channel).
+This is done in a abstracted way so the user has to provide implementation for:</p>
 
 <ul>
-<li>Create a console application project (.NET/.NET Core)</li>
-<li>Install the nuget BenchmarkDotNet and it&rsquo;s dependencies</li>
-<li>Always run in release mode!</li>
+<li>a Work interface</li>
+<li>a WorkGenerator function</li>
+<li>a WorkCollector function</li>
 </ul>
 
-<p>The following code is needed in the Program Main</p>
+<h3 id="work-interface">Work interface</h3>
 
-<pre><code> public static void Main(string[] args)
- {
-     BenchmarkSwitcher.FromAssembly(typeof(Program)
-                      .GetTypeInfo().Assembly).Run(args);
- }
-</code></pre>
-
-<p>which will scan the assembly for benchmarks and asks you which one to run.</p>
-
-<p>A typical benchmark is just a class with methods that are annotated with the <code>[Benchmark]</code> attribute like the following one:</p>
-
-<pre><code>[MemoryDiagnoser]
-public class DateTimeToStringBenchmark
-{
-    private static readonly DateTime _dateTime = 
-        new DateTime(2016, 12, 31, 23, 59, 59, 999);
-
-    [Benchmark(Baseline = true, Description = &quot;DateTime ToString&quot;)]
-    public string DateTimeToString()
-    {
-        return _dateTime.ToString();
-    }
-
-    [Benchmark(Description = &quot;DateTime ToString with format&quot;)]
-    public string DateTimeToStringFormat()
-    {
-        return _dateTime.ToString(&quot;g&quot;);
-    }
+<pre><code>type Work interface {
+    Do()
+    GetError() error
+    Result() interface{}
 }
 </code></pre>
 
-<p>Pretty simple isn&rsquo;t it?</p>
+<p>The work interface defines a method <code>Do()</code> which contains all the processing logic of the work item. The <code>GetError() error</code> method can be used to flag the work item as failed and return a error. The <code>Result() interface{}</code> defines a method which returns the result of the work. Due to the lack of generics the data return has to be cast from <code>interface{}</code> to the actual result type in order to be usable in the WorkCollector.</p>
 
-<p>After the run the result is the following:</p>
+<p>The following example work implementation shows a work item that calculates a MD5 hash of a string:</p>
 
-<table>
-    <thead>
-        <tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Scaled</th><th>ScaledSD</th><th>Gen 0</th><th>Gen 1</th><th>Allocated</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>'DateTime ToString'</td><td>848.8 ns</td><td>2.8059 ns</td><td>2.4874 ns</td><td>1.00</td><td>0.00</td><td>0.0410</td><td>-</td><td>132 B</td></tr>
-        <tr><td> 'DateTime ToString with format'</td><td>790.0 ns</td><td>18.0956 ns</td><td>16.0413 ns</td><td>0.93</td><td>0.02</td><td>0.0391</td><td>0.0104</td><td>124 B</td></tr>
-    </tbody>
-</table>
+<pre><code>// md5Work defines a structure that holds the value to be hashed and the result of the hashing
+type md5Work struct {
+    data   []byte
+    hashed []byte
+}
 
-<p>I get the timings of the method and by using the <code>[MemoryDiagnoser]</code> attribute i get event the GC Stats.</p>
+// Do calculates the hash of the given value
+func (gw *md5Work) Do() {
+    gw.data = md5.New().Sum(gw.hashed)
+}
 
-<h2 id="conducted-benchmarks">Conducted Benchmarks</h2>
+// GetError returns nil since the work does not fail
+func (gw *md5Work) GetError() error {
+    return nil
+}
 
-<p>Given the easiness to create such benchmark i have started a github repository named <a href="https://github.com/mantzas/DotNetBenchmarks">DotNetBenchmarks</a>.</p>
+// Result returns the hashed result
+func (gw *md5Work) Result() interface{} {
+    return gw.data
+}
+</code></pre>
 
-<p>There you can find some of the performance questions that i have about some components like logging frameworks, XML Serialization, String concatenation etc.
-Every time i have to check the performance of some component i will add a new benchmark to this repository. If anyone likes to contribute, even better!
-Make a PR!</p>
+<p>Check out the examples folder of the <a href="https://github.com/mantzas/parwork">Github</a> repo for a complete example.</p>
 
-<p>Please note that:</p>
+<h3 id="workgenerator-function">WorkGenerator function</h3>
 
-<ul>
-<li>These benchmark are not conducted in order to make certain libraries look good or bad</li>
-<li>Please create a issue or better make a PR if you think that the benchmark methodology is wrong or the setup is wrong</li>
-<li>Do not take the results as granted and conduct your own benchmarks to see if in the context of your application the results differ</li>
-</ul>
+<pre><code>type WorkGenerator func() Work
+</code></pre>
+
+<p>The WorkGenerator function allows the user to provide a implementation that returns on each call a work item to be processed. If the generator returns nil the generation of work has finished.</p>
+
+<p>Check out the examples folder of the <a href="https://github.com/mantzas/parwork">Github</a> repo for a implementation of the generator.</p>
+
+<h3 id="workcollector-function">WorkCollector function</h3>
+
+<pre><code>type WorkCollector func(Work)
+</code></pre>
+
+<p>The WorkCollector function takes as a argument a completed Work item. It can check for a failure by calling the GetError or the Result method of the Work item and handle it appropriately.</p>
+
+<p>Check out the examples folder of the <a href="https://github.com/mantzas/parwork">Github</a> repo for a implementation of the collector.</p>
+
+<h3 id="check-out">Check out</h3>
+
+<p>Head over to the <a href="https://github.com/mantzas/parwork">Github</a> repo to see the code, with a working example, try it and if you find something, like a bug or a improvement, don&rsquo;t hesitate do open a issue or better yet create a PR.</p>
 
 <p>Thanks and enjoy!</p>
 
