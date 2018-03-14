@@ -138,6 +138,15 @@
     </item>
     
     <item>
+      <title>Fork Join</title>
+      <link>http://blog.mantziaris.eu/categories/fork-join/</link>
+      <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
+      
+      <guid>http://blog.mantziaris.eu/categories/fork-join/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Github Pages</title>
       <link>http://blog.mantziaris.eu/categories/github-pages/</link>
       <pubDate>Sat, 07 Nov 2015 13:42:43 +0200</pubDate>
@@ -149,7 +158,7 @@
     <item>
       <title>Go</title>
       <link>http://blog.mantziaris.eu/categories/go/</link>
-      <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
+      <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
       
       <guid>http://blog.mantziaris.eu/categories/go/</guid>
       <description></description>
@@ -192,6 +201,15 @@
     </item>
     
     <item>
+      <title>Parallel</title>
+      <link>http://blog.mantziaris.eu/categories/parallel/</link>
+      <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
+      
+      <guid>http://blog.mantziaris.eu/categories/parallel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pattern</title>
       <link>http://blog.mantziaris.eu/categories/pattern/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
@@ -228,7 +246,7 @@
     </item>
     
     <item>
-      <title>Unit Of Work</title>
+      <title>Unit of Work</title>
       <link>http://blog.mantziaris.eu/categories/unit-of-work/</link>
       <pubDate>Mon, 24 Oct 2016 22:30:54 +0300</pubDate>
       
