@@ -2,255 +2,255 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/</link>
+    <link>https://blog.mantziaris.eu/categories/</link>
     <description>Recent content in Categories on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 May 2016 21:35:00 +0300</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Asp Dotnet</title>
-      <link>http://blog.mantziaris.eu/categories/asp-dotnet/</link>
+      <link>https://blog.mantziaris.eu/categories/asp-dotnet/</link>
       <pubDate>Wed, 25 May 2016 21:35:00 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/asp-dotnet/</guid>
+      <guid>https://blog.mantziaris.eu/categories/asp-dotnet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Asp Dotnet Core</title>
-      <link>http://blog.mantziaris.eu/categories/asp-dotnet-core/</link>
+      <link>https://blog.mantziaris.eu/categories/asp-dotnet-core/</link>
       <pubDate>Thu, 24 Nov 2016 08:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/asp-dotnet-core/</guid>
+      <guid>https://blog.mantziaris.eu/categories/asp-dotnet-core/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Async Await</title>
-      <link>http://blog.mantziaris.eu/categories/async-await/</link>
+      <link>https://blog.mantziaris.eu/categories/async-await/</link>
       <pubDate>Wed, 25 May 2016 21:35:00 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/async-await/</guid>
+      <guid>https://blog.mantziaris.eu/categories/async-await/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Benchmarks</title>
-      <link>http://blog.mantziaris.eu/categories/benchmarks/</link>
+      <link>https://blog.mantziaris.eu/categories/benchmarks/</link>
       <pubDate>Tue, 11 Jul 2017 07:36:33 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/benchmarks/</guid>
+      <guid>https://blog.mantziaris.eu/categories/benchmarks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>http://blog.mantziaris.eu/categories/blog/</link>
+      <link>https://blog.mantziaris.eu/categories/blog/</link>
       <pubDate>Sat, 07 Nov 2015 13:42:43 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/blog/</guid>
+      <guid>https://blog.mantziaris.eu/categories/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud</title>
-      <link>http://blog.mantziaris.eu/categories/cloud/</link>
+      <link>https://blog.mantziaris.eu/categories/cloud/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/cloud/</guid>
+      <guid>https://blog.mantziaris.eu/categories/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Csharp</title>
-      <link>http://blog.mantziaris.eu/categories/csharp/</link>
+      <link>https://blog.mantziaris.eu/categories/csharp/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/csharp/</guid>
+      <guid>https://blog.mantziaris.eu/categories/csharp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Access</title>
-      <link>http://blog.mantziaris.eu/categories/data-access/</link>
+      <link>https://blog.mantziaris.eu/categories/data-access/</link>
       <pubDate>Mon, 24 Oct 2016 22:30:54 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/data-access/</guid>
+      <guid>https://blog.mantziaris.eu/categories/data-access/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design</title>
-      <link>http://blog.mantziaris.eu/categories/design/</link>
+      <link>https://blog.mantziaris.eu/categories/design/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/design/</guid>
+      <guid>https://blog.mantziaris.eu/categories/design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Domain</title>
-      <link>http://blog.mantziaris.eu/categories/domain/</link>
+      <link>https://blog.mantziaris.eu/categories/domain/</link>
       <pubDate>Sat, 07 Nov 2015 13:42:43 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/domain/</guid>
+      <guid>https://blog.mantziaris.eu/categories/domain/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dotnet</title>
-      <link>http://blog.mantziaris.eu/categories/dotnet/</link>
+      <link>https://blog.mantziaris.eu/categories/dotnet/</link>
       <pubDate>Tue, 11 Jul 2017 07:36:33 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/dotnet/</guid>
+      <guid>https://blog.mantziaris.eu/categories/dotnet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dotnet Core</title>
-      <link>http://blog.mantziaris.eu/categories/dotnet-core/</link>
+      <link>https://blog.mantziaris.eu/categories/dotnet-core/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/dotnet-core/</guid>
+      <guid>https://blog.mantziaris.eu/categories/dotnet-core/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Event Sourcing</title>
-      <link>http://blog.mantziaris.eu/categories/event-sourcing/</link>
+      <link>https://blog.mantziaris.eu/categories/event-sourcing/</link>
       <pubDate>Mon, 01 Feb 2016 19:59:22 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/event-sourcing/</guid>
+      <guid>https://blog.mantziaris.eu/categories/event-sourcing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Event Store</title>
-      <link>http://blog.mantziaris.eu/categories/event-store/</link>
+      <link>https://blog.mantziaris.eu/categories/event-store/</link>
       <pubDate>Mon, 01 Feb 2016 19:59:22 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/event-store/</guid>
+      <guid>https://blog.mantziaris.eu/categories/event-store/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fork Join</title>
-      <link>http://blog.mantziaris.eu/categories/fork-join/</link>
+      <link>https://blog.mantziaris.eu/categories/fork-join/</link>
       <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/fork-join/</guid>
+      <guid>https://blog.mantziaris.eu/categories/fork-join/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github Pages</title>
-      <link>http://blog.mantziaris.eu/categories/github-pages/</link>
+      <link>https://blog.mantziaris.eu/categories/github-pages/</link>
       <pubDate>Sat, 07 Nov 2015 13:42:43 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/github-pages/</guid>
+      <guid>https://blog.mantziaris.eu/categories/github-pages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>http://blog.mantziaris.eu/categories/go/</link>
+      <link>https://blog.mantziaris.eu/categories/go/</link>
       <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/go/</guid>
+      <guid>https://blog.mantziaris.eu/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>http://blog.mantziaris.eu/categories/hugo/</link>
+      <link>https://blog.mantziaris.eu/categories/hugo/</link>
       <pubDate>Sat, 07 Nov 2015 13:42:43 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/hugo/</guid>
+      <guid>https://blog.mantziaris.eu/categories/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Library</title>
-      <link>http://blog.mantziaris.eu/categories/library/</link>
+      <link>https://blog.mantziaris.eu/categories/library/</link>
       <pubDate>Mon, 01 Feb 2016 19:59:22 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/library/</guid>
+      <guid>https://blog.mantziaris.eu/categories/library/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://blog.mantziaris.eu/categories/linux/</link>
+      <link>https://blog.mantziaris.eu/categories/linux/</link>
       <pubDate>Thu, 24 Nov 2016 08:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/linux/</guid>
+      <guid>https://blog.mantziaris.eu/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Logging</title>
-      <link>http://blog.mantziaris.eu/categories/logging/</link>
+      <link>https://blog.mantziaris.eu/categories/logging/</link>
       <pubDate>Wed, 20 Jan 2016 00:44:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/logging/</guid>
+      <guid>https://blog.mantziaris.eu/categories/logging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Parallel</title>
-      <link>http://blog.mantziaris.eu/categories/parallel/</link>
+      <link>https://blog.mantziaris.eu/categories/parallel/</link>
       <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/parallel/</guid>
+      <guid>https://blog.mantziaris.eu/categories/parallel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pattern</title>
-      <link>http://blog.mantziaris.eu/categories/pattern/</link>
+      <link>https://blog.mantziaris.eu/categories/pattern/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/pattern/</guid>
+      <guid>https://blog.mantziaris.eu/categories/pattern/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Repository</title>
-      <link>http://blog.mantziaris.eu/categories/repository/</link>
+      <link>https://blog.mantziaris.eu/categories/repository/</link>
       <pubDate>Mon, 24 Oct 2016 22:30:54 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/repository/</guid>
+      <guid>https://blog.mantziaris.eu/categories/repository/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tap</title>
-      <link>http://blog.mantziaris.eu/categories/tap/</link>
+      <link>https://blog.mantziaris.eu/categories/tap/</link>
       <pubDate>Wed, 25 May 2016 21:35:00 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/tap/</guid>
+      <guid>https://blog.mantziaris.eu/categories/tap/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tpl</title>
-      <link>http://blog.mantziaris.eu/categories/tpl/</link>
+      <link>https://blog.mantziaris.eu/categories/tpl/</link>
       <pubDate>Wed, 25 May 2016 21:35:00 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/tpl/</guid>
+      <guid>https://blog.mantziaris.eu/categories/tpl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Unit of Work</title>
-      <link>http://blog.mantziaris.eu/categories/unit-of-work/</link>
+      <link>https://blog.mantziaris.eu/categories/unit-of-work/</link>
       <pubDate>Mon, 24 Oct 2016 22:30:54 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/categories/unit-of-work/</guid>
+      <guid>https://blog.mantziaris.eu/categories/unit-of-work/</guid>
       <description></description>
     </item>
     

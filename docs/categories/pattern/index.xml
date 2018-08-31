@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pattern on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/pattern/</link>
+    <link>https://blog.mantziaris.eu/categories/pattern/</link>
     <description>Recent content in Pattern on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Jan 2017 13:11:25 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/pattern/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/pattern/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tripping the circuit</title>
-      <link>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
+      <link>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
       <description>Circuit breaker pattern This is probably one of the most useful &amp;ldquo;cloud&amp;rdquo; patterns out there and it is fairly easy to implement.
 There are great articles and implementations, like Polly, already on the internet about this pattern so why another one?
  Κρείττον οψιμαθή είναι ή αμαθή.
@@ -26,10 +26,10 @@ Better too have learned lately than never, as he tried to explain why he learned
     
     <item>
       <title>The Repository and Unit of Work pattern</title>
-      <link>http://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</link>
       <pubDate>Mon, 24 Oct 2016 22:30:54 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</guid>
       <description>Yes, i know not this again. Is this not the one millionth time that someone blogs about that? Yes, yes and yes but… It is always good to repeat things and we all know that
 “Repetition is the mother of learning, the father of action, which makes it the architect of accomplishment.” ― Zig Ziglar
 There are still implementations out there that might benefit from this…

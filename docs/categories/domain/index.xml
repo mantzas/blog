@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Domain on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/domain/</link>
+    <link>https://blog.mantziaris.eu/categories/domain/</link>
     <description>Recent content in Domain on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Nov 2015 13:42:43 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/domain/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/domain/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Setup a blog with Hugo and Github Pages</title>
-      <link>http://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</link>
+      <link>https://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</link>
       <pubDate>Sat, 07 Nov 2015 13:42:43 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</guid>
       <description>Intro It was long my desire to write a blog with stuff that interests me.
 Lately i was studying Golang and i came across Hugo which is a really nice and fast site generation utility.
 This was a great opportunity to start my own blog by using Hugo and Github Pages in order to host it. Why?

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event Sourcing on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/event-sourcing/</link>
+    <link>https://blog.mantziaris.eu/categories/event-sourcing/</link>
     <description>Recent content in Event Sourcing on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Feb 2016 19:59:22 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/event-sourcing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/event-sourcing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New go event sourcing library named incata</title>
-      <link>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</link>
       <pubDate>Mon, 01 Feb 2016 19:59:22 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</guid>
       <description>incata, a event sourcing library for go Event sourcing is capturing all changes of an application state as a sequence of events. Since we only store events we only have to add events to a store, in contrast to updates for keeping the application state. A much simpler model that scales very well. When needing the application state we just aggregate the events into
 More on this can be read all over the internet but two excellent links are available below:</description>
     </item>

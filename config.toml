@@ -1,4 +1,4 @@
-baseurl = "http://blog.mantziaris.eu/"
+baseurl = ""
 title = "Coding Odyssey"
 languageCode = "en-us"
 disqusShortname = "mantzas" # Optional, enable Disqus integration

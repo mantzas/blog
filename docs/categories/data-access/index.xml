@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Access on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/data-access/</link>
+    <link>https://blog.mantziaris.eu/categories/data-access/</link>
     <description>Recent content in Data Access on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Oct 2016 22:30:54 +0300</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/data-access/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/data-access/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Repository and Unit of Work pattern</title>
-      <link>http://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</link>
       <pubDate>Mon, 24 Oct 2016 22:30:54 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</guid>
       <description>Yes, i know not this again. Is this not the one millionth time that someone blogs about that? Yes, yes and yes but… It is always good to repeat things and we all know that
 “Repetition is the mother of learning, the father of action, which makes it the architect of accomplishment.” ― Zig Ziglar
 There are still implementations out there that might benefit from this…

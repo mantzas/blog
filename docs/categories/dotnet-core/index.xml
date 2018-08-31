@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dotnet Core on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/dotnet-core/</link>
+    <link>https://blog.mantziaris.eu/categories/dotnet-core/</link>
     <description>Recent content in Dotnet Core on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Jan 2017 13:11:25 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/dotnet-core/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/dotnet-core/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tripping the circuit</title>
-      <link>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
+      <link>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
       <description>Circuit breaker pattern This is probably one of the most useful &amp;ldquo;cloud&amp;rdquo; patterns out there and it is fairly easy to implement.
 There are great articles and implementations, like Polly, already on the internet about this pattern so why another one?
  Κρείττον οψιμαθή είναι ή αμαθή.
@@ -26,10 +26,10 @@ Better too have learned lately than never, as he tried to explain why he learned
     
     <item>
       <title>dotNETZone.gr meetup .NET core presentation</title>
-      <link>http://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</link>
       <pubDate>Thu, 24 Nov 2016 08:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</guid>
       <description>The presentation was about the current state of .NET Core in the Linux World. Here are the slides of the presentation and the github repository.
 Thanks for attending.</description>
     </item>

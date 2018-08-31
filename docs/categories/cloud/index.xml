@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/cloud/</link>
+    <link>https://blog.mantziaris.eu/categories/cloud/</link>
     <description>Recent content in Cloud on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 Jan 2017 13:11:25 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tripping the circuit</title>
-      <link>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
+      <link>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
       <description>Circuit breaker pattern This is probably one of the most useful &amp;ldquo;cloud&amp;rdquo; patterns out there and it is fairly easy to implement.
 There are great articles and implementations, like Polly, already on the internet about this pattern so why another one?
  Κρείττον οψιμαθή είναι ή αμαθή.

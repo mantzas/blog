@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/</link>
+    <link>https://blog.mantziaris.eu/</link>
     <description>Recent content on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 14 Mar 2018 19:00:10 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parallelize work using parwork</title>
-      <link>http://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</link>
+      <link>https://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</link>
       <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</guid>
       <description>In order to process a lot of work we have to parallelize work across all cores, and especially if it&amp;rsquo;s CPU bound. Go has goroutines, which can be used to parallelize the work, but there is the cost of context switching for a lot of goroutines. Minimizing this context switching can be achieved by using a fork-join model when processing work.
 Parwork solves this problem by using goroutines, channels and waitgroups.</description>
     </item>
     
     <item>
       <title>Various .NET Benchmarks</title>
-      <link>http://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</link>
+      <link>https://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</link>
       <pubDate>Tue, 11 Jul 2017 07:36:33 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</guid>
       <description>.NET Benchmarks A lot of times i was wondering what is the best performing code. In order to determine that i had to benchmark my code, but benchmarks are hard to write. Luckily there is a open source project that does this work perfectly good and very easy.
 The name of the library is BenchmarkDotNet and the documentation can be found here. The only thing you have to do is:</description>
     </item>
     
     <item>
       <title>Tripping the circuit</title>
-      <link>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
+      <link>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
       <description>Circuit breaker pattern This is probably one of the most useful &amp;ldquo;cloud&amp;rdquo; patterns out there and it is fairly easy to implement.
 There are great articles and implementations, like Polly, already on the internet about this pattern so why another one?
  Κρείττον οψιμαθή είναι ή αμαθή.
@@ -46,20 +46,20 @@ Better too have learned lately than never, as he tried to explain why he learned
     
     <item>
       <title>dotNETZone.gr meetup .NET core presentation</title>
-      <link>http://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</link>
       <pubDate>Thu, 24 Nov 2016 08:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</guid>
       <description>The presentation was about the current state of .NET Core in the Linux World. Here are the slides of the presentation and the github repository.
 Thanks for attending.</description>
     </item>
     
     <item>
       <title>The Repository and Unit of Work pattern</title>
-      <link>http://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</link>
       <pubDate>Mon, 24 Oct 2016 22:30:54 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</guid>
       <description>Yes, i know not this again. Is this not the one millionth time that someone blogs about that? Yes, yes and yes but… It is always good to repeat things and we all know that
 “Repetition is the mother of learning, the father of action, which makes it the architect of accomplishment.” ― Zig Ziglar
 There are still implementations out there that might benefit from this…
@@ -68,29 +68,29 @@ So let’s start with some definitions.</description>
     
     <item>
       <title>To TAP or not to TAP</title>
-      <link>http://blog.mantziaris.eu/blog/2016/05/25/to-tap-or-not-to-tap/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/05/25/to-tap-or-not-to-tap/</link>
       <pubDate>Wed, 25 May 2016 21:35:00 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/05/25/to-tap-or-not-to-tap/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/05/25/to-tap-or-not-to-tap/</guid>
       <description>TT || !TT Ramblings on Tasks, async-await and ASP.NET. The slides from the meetup do contain common issues encountered when working with TPL, async-await and ASP.NET along with some good practices. These are off course not all. Please let me know if you have any suggestions. Thanks for attenting.</description>
     </item>
     
     <item>
       <title>New go event sourcing library named incata</title>
-      <link>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</link>
       <pubDate>Mon, 01 Feb 2016 19:59:22 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</guid>
       <description>incata, a event sourcing library for go Event sourcing is capturing all changes of an application state as a sequence of events. Since we only store events we only have to add events to a store, in contrast to updates for keeping the application state. A much simpler model that scales very well. When needing the application state we just aggregate the events into
 More on this can be read all over the internet but two excellent links are available below:</description>
     </item>
     
     <item>
       <title>Initial release of adaptlog</title>
-      <link>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
       <pubDate>Wed, 20 Jan 2016 00:44:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
       <description>adaptlog, a logging abstraction for go Almost every application logs data one way or another. There are a plethora of logging packages available for golang.
  There is the one that comes with the standard packages which takes a simple approach.
  There are many logging packages that follow the well established leveled approach, and there are really a lot of them.  The decision of choosing a specific library comes with the cost of a direct dependency.</description>
@@ -98,10 +98,10 @@ More on this can be read all over the internet but two excellent links are avail
     
     <item>
       <title>Setup a blog with Hugo and Github Pages</title>
-      <link>http://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</link>
+      <link>https://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</link>
       <pubDate>Sat, 07 Nov 2015 13:42:43 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</guid>
       <description>Intro It was long my desire to write a blog with stuff that interests me.
 Lately i was studying Golang and i came across Hugo which is a really nice and fast site generation utility.
 This was a great opportunity to start my own blog by using Hugo and Github Pages in order to host it. Why?
@@ -110,10 +110,10 @@ This was a great opportunity to start my own blog by using Hugo and Github Pages
     
     <item>
       <title>License</title>
-      <link>http://blog.mantziaris.eu/license/</link>
+      <link>https://blog.mantziaris.eu/license/</link>
       <pubDate>Sat, 07 Nov 2015 01:43:37 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/license/</guid>
+      <guid>https://blog.mantziaris.eu/license/</guid>
       <description>Content license 
 mantzas blog by Sotirios Mantziaris is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 Code license All source code files and snippets found on this blog, unless otherwise explicitly noted, are licensed under the terms below.
@@ -122,10 +122,10 @@ Copyright 2015-2016 Sotirios Mantziaris Licensed under the Apache License, Versi
     
     <item>
       <title>About Me</title>
-      <link>http://blog.mantziaris.eu/about/</link>
+      <link>https://blog.mantziaris.eu/about/</link>
       <pubDate>Fri, 06 Nov 2015 01:05:42 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/about/</guid>
+      <guid>https://blog.mantziaris.eu/about/</guid>
       <description>My name is Sotirios Mantziaris (Greek: Σωτήρης Μαντζιάρης).
 I am a software engineer and live and work in Athens, Greece.
 I use mostly the Microsoft .Net Framework Stack but i am exploring everything interesting like Go lately.

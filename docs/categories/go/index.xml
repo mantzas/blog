@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/go/</link>
+    <link>https://blog.mantziaris.eu/categories/go/</link>
     <description>Recent content in Go on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 14 Mar 2018 19:00:10 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parallelize work using parwork</title>
-      <link>http://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</link>
+      <link>https://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</link>
       <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</guid>
       <description>In order to process a lot of work we have to parallelize work across all cores, and especially if it&amp;rsquo;s CPU bound. Go has goroutines, which can be used to parallelize the work, but there is the cost of context switching for a lot of goroutines. Minimizing this context switching can be achieved by using a fork-join model when processing work.
 Parwork solves this problem by using goroutines, channels and waitgroups.</description>
     </item>
     
     <item>
       <title>Tripping the circuit</title>
-      <link>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
+      <link>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</link>
       <pubDate>Fri, 06 Jan 2017 13:11:25 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</guid>
       <description>Circuit breaker pattern This is probably one of the most useful &amp;ldquo;cloud&amp;rdquo; patterns out there and it is fairly easy to implement.
 There are great articles and implementations, like Polly, already on the internet about this pattern so why another one?
  Κρείττον οψιμαθή είναι ή αμαθή.
@@ -36,20 +36,20 @@ Better too have learned lately than never, as he tried to explain why he learned
     
     <item>
       <title>New go event sourcing library named incata</title>
-      <link>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</link>
       <pubDate>Mon, 01 Feb 2016 19:59:22 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</guid>
       <description>incata, a event sourcing library for go Event sourcing is capturing all changes of an application state as a sequence of events. Since we only store events we only have to add events to a store, in contrast to updates for keeping the application state. A much simpler model that scales very well. When needing the application state we just aggregate the events into
 More on this can be read all over the internet but two excellent links are available below:</description>
     </item>
     
     <item>
       <title>Initial release of adaptlog</title>
-      <link>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
       <pubDate>Wed, 20 Jan 2016 00:44:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
       <description>adaptlog, a logging abstraction for go Almost every application logs data one way or another. There are a plethora of logging packages available for golang.
  There is the one that comes with the standard packages which takes a simple approach.
  There are many logging packages that follow the well established leveled approach, and there are really a lot of them.  The decision of choosing a specific library comes with the cost of a direct dependency.</description>

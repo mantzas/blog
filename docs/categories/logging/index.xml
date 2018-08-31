@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Logging on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/logging/</link>
+    <link>https://blog.mantziaris.eu/categories/logging/</link>
     <description>Recent content in Logging on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Jan 2016 00:44:10 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/logging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/logging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Initial release of adaptlog</title>
-      <link>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
       <pubDate>Wed, 20 Jan 2016 00:44:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
       <description>adaptlog, a logging abstraction for go Almost every application logs data one way or another. There are a plethora of logging packages available for golang.
  There is the one that comes with the standard packages which takes a simple approach.
  There are many logging packages that follow the well established leveled approach, and there are really a lot of them.  The decision of choosing a specific library comes with the cost of a direct dependency.</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>Initial release of adaptlog</title>
-      <link>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
+      <link>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</link>
       <pubDate>Wed, 20 Jan 2016 00:44:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</guid>
       <description>adaptlog, a logging abstraction for go Almost every application logs data one way or another. There are a plethora of logging packages available for golang.
  There is the one that comes with the standard packages which takes a simple approach.
  There are many logging packages that follow the well established leveled approach, and there are really a lot of them.  The decision of choosing a specific library comes with the cost of a direct dependency.</description>

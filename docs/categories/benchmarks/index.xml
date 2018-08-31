@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Benchmarks on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/benchmarks/</link>
+    <link>https://blog.mantziaris.eu/categories/benchmarks/</link>
     <description>Recent content in Benchmarks on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Jul 2017 07:36:33 +0300</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/benchmarks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/benchmarks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Various .NET Benchmarks</title>
-      <link>http://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</link>
+      <link>https://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</link>
       <pubDate>Tue, 11 Jul 2017 07:36:33 +0300</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</guid>
       <description>.NET Benchmarks A lot of times i was wondering what is the best performing code. In order to determine that i had to benchmark my code, but benchmarks are hard to write. Luckily there is a open source project that does this work perfectly good and very easy.
 The name of the library is BenchmarkDotNet and the documentation can be found here. The only thing you have to do is:</description>
     </item>

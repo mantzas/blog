@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Parallel on Coding Odyssey</title>
-    <link>http://blog.mantziaris.eu/categories/parallel/</link>
+    <link>https://blog.mantziaris.eu/categories/parallel/</link>
     <description>Recent content in Parallel on Coding Odyssey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 14 Mar 2018 19:00:10 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.mantziaris.eu/categories/parallel/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.mantziaris.eu/categories/parallel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parallelize work using parwork</title>
-      <link>http://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</link>
+      <link>https://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</link>
       <pubDate>Wed, 14 Mar 2018 19:00:10 +0200</pubDate>
       
-      <guid>http://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</guid>
+      <guid>https://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</guid>
       <description>In order to process a lot of work we have to parallelize work across all cores, and especially if it&amp;rsquo;s CPU bound. Go has goroutines, which can be used to parallelize the work, but there is the cost of context switching for a lot of goroutines. Minimizing this context switching can be achieved by using a fork-join model when processing work.
 Parwork solves this problem by using goroutines, channels and waitgroups.</description>
     </item>

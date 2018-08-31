@@ -3,236 +3,236 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2018/03/14/parallelize-work-using-parwork/</loc>
     <lastmod>2018-03-14T19:00:10+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2017/07/11/various-.net-benchmarks/</loc>
     <lastmod>2017-07-11T07:36:33+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2017/01/06/tripping-the-circuit/</loc>
     <lastmod>2017-01-06T13:11:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2016/11/24/dotnetzone.gr-meetup-.net-core-presentation/</loc>
     <lastmod>2016-11-24T08:11:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2016/10/24/the-repository-and-unit-of-work-pattern/</loc>
     <lastmod>2016-10-24T22:30:54+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2016/05/25/to-tap-or-not-to-tap/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2016/05/25/to-tap-or-not-to-tap/</loc>
     <lastmod>2016-05-25T21:35:00+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2016/02/01/new-go-event-sourcing-library-named-incata/</loc>
     <lastmod>2016-02-01T19:59:22+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2016/01/20/initial-release-of-adaptlog/</loc>
     <lastmod>2016-01-20T00:44:10+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</loc>
+    <loc>https://blog.mantziaris.eu/blog/2015/11/07/setup-a-blog-with-hugo-and-github-pages/</loc>
     <lastmod>2015-11-07T13:42:43+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/license/</loc>
+    <loc>https://blog.mantziaris.eu/license/</loc>
     <lastmod>2015-11-07T01:43:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/about/</loc>
+    <loc>https://blog.mantziaris.eu/about/</loc>
     <lastmod>2015-11-06T01:05:42+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/asp-dotnet/</loc>
+    <loc>https://blog.mantziaris.eu/categories/asp-dotnet/</loc>
     <lastmod>2016-05-25T21:35:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/asp-dotnet-core/</loc>
+    <loc>https://blog.mantziaris.eu/categories/asp-dotnet-core/</loc>
     <lastmod>2016-11-24T08:11:25+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/async-await/</loc>
+    <loc>https://blog.mantziaris.eu/categories/async-await/</loc>
     <lastmod>2016-05-25T21:35:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/benchmarks/</loc>
+    <loc>https://blog.mantziaris.eu/categories/benchmarks/</loc>
     <lastmod>2017-07-11T07:36:33+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/blog/</loc>
+    <loc>https://blog.mantziaris.eu/categories/blog/</loc>
     <lastmod>2015-11-07T13:42:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/</loc>
+    <loc>https://blog.mantziaris.eu/categories/</loc>
     <lastmod>2016-05-25T21:35:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/cloud/</loc>
+    <loc>https://blog.mantziaris.eu/categories/cloud/</loc>
     <lastmod>2017-01-06T13:11:25+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/</loc>
+    <loc>https://blog.mantziaris.eu/</loc>
     <lastmod>2018-03-14T19:00:10+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/csharp/</loc>
+    <loc>https://blog.mantziaris.eu/categories/csharp/</loc>
     <lastmod>2017-01-06T13:11:25+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/data-access/</loc>
+    <loc>https://blog.mantziaris.eu/categories/data-access/</loc>
     <lastmod>2016-10-24T22:30:54+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/design/</loc>
+    <loc>https://blog.mantziaris.eu/categories/design/</loc>
     <lastmod>2017-01-06T13:11:25+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/domain/</loc>
+    <loc>https://blog.mantziaris.eu/categories/domain/</loc>
     <lastmod>2015-11-07T13:42:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/dotnet/</loc>
+    <loc>https://blog.mantziaris.eu/categories/dotnet/</loc>
     <lastmod>2017-07-11T07:36:33+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/dotnet-core/</loc>
+    <loc>https://blog.mantziaris.eu/categories/dotnet-core/</loc>
     <lastmod>2017-01-06T13:11:25+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/event-sourcing/</loc>
+    <loc>https://blog.mantziaris.eu/categories/event-sourcing/</loc>
     <lastmod>2016-02-01T19:59:22+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/event-store/</loc>
+    <loc>https://blog.mantziaris.eu/categories/event-store/</loc>
     <lastmod>2016-02-01T19:59:22+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/fork-join/</loc>
+    <loc>https://blog.mantziaris.eu/categories/fork-join/</loc>
     <lastmod>2018-03-14T19:00:10+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/github-pages/</loc>
+    <loc>https://blog.mantziaris.eu/categories/github-pages/</loc>
     <lastmod>2015-11-07T13:42:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/go/</loc>
+    <loc>https://blog.mantziaris.eu/categories/go/</loc>
     <lastmod>2018-03-14T19:00:10+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/hugo/</loc>
+    <loc>https://blog.mantziaris.eu/categories/hugo/</loc>
     <lastmod>2015-11-07T13:42:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/library/</loc>
+    <loc>https://blog.mantziaris.eu/categories/library/</loc>
     <lastmod>2016-02-01T19:59:22+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/linux/</loc>
+    <loc>https://blog.mantziaris.eu/categories/linux/</loc>
     <lastmod>2016-11-24T08:11:25+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/logging/</loc>
+    <loc>https://blog.mantziaris.eu/categories/logging/</loc>
     <lastmod>2016-01-20T00:44:10+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/parallel/</loc>
+    <loc>https://blog.mantziaris.eu/categories/parallel/</loc>
     <lastmod>2018-03-14T19:00:10+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/pattern/</loc>
+    <loc>https://blog.mantziaris.eu/categories/pattern/</loc>
     <lastmod>2017-01-06T13:11:25+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/post/</loc>
+    <loc>https://blog.mantziaris.eu/post/</loc>
     <lastmod>2018-03-14T19:00:10+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/repository/</loc>
+    <loc>https://blog.mantziaris.eu/categories/repository/</loc>
     <lastmod>2016-10-24T22:30:54+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/tap/</loc>
+    <loc>https://blog.mantziaris.eu/categories/tap/</loc>
     <lastmod>2016-05-25T21:35:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/tpl/</loc>
+    <loc>https://blog.mantziaris.eu/categories/tpl/</loc>
     <lastmod>2016-05-25T21:35:00+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://blog.mantziaris.eu/categories/unit-of-work/</loc>
+    <loc>https://blog.mantziaris.eu/categories/unit-of-work/</loc>
     <lastmod>2016-10-24T22:30:54+03:00</lastmod>
     <priority>0</priority>
   </url>
