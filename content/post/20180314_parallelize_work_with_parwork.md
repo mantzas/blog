@@ -1,11 +1,12 @@
-+++
-title = "Parallelize work using parwork"
-description = "Parallelize work using the parwork package"
-keywords = ["parallel","go","fork-join"]
-categories = ["parallel","go","fork-join"]
-date = "2018-03-14T19:00:10+02:00"
-
-+++
+---
+title: "Parallelize work using parwork"
+description: "Parallelize work using the parwork package"
+published: false
+tags: 'parallel, go'
+series: Go series
+keywords: ["parallel","go","fork-join"]
+categories: ["parallel","go","fork-join"]
+---
 
 In order to process a lot of work we have to parallelize work across all cores, and especially if it's CPU bound.
 Go has goroutines, which can be used to parallelize the work, but there is the cost of context switching for a lot of goroutines.
