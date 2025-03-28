@@ -1,4 +1,11 @@
-# Parallelize work using parwork
++++
+title = "Parallelize work using parwork"
+description = "Parallelize work using the parwork package"
+keywords = ["parallel","go","fork-join"]
+categories = ["parallel","go","fork-join"]
+date = "2018-03-14T19:00:10+02:00"
+
++++
 
 In order to process a lot of work we have to parallelize work across all cores, and especially if it's CPU bound.
 Go has goroutines, which can be used to parallelize the work, but there is the cost of context switching for a lot of goroutines.
@@ -12,7 +19,7 @@ This is done in a abstracted way so the user has to provide implementation for:
 - a WorkGenerator function
 - a WorkCollector function
 
-## Work interface
+### Work interface
 
     type Work interface {
         Do()
@@ -47,7 +54,7 @@ The following example work implementation shows a work item that calculates a MD
 
 Check out the examples folder of the [Github](https://github.com/mantzas/parwork) repo for a complete example.
 
-## WorkGenerator function
+### WorkGenerator function
 
     type WorkGenerator func() Work
 
@@ -55,7 +62,7 @@ The WorkGenerator function allows the user to provide a implementation that retu
 
 Check out the examples folder of the [Github](https://github.com/mantzas/parwork) repo for a implementation of the generator.
 
-## WorkCollector function
+### WorkCollector function
 
     type WorkCollector func(Work)
 
@@ -63,7 +70,7 @@ The WorkCollector function takes as a argument a completed Work item. It can che
 
 Check out the examples folder of the [Github](https://github.com/mantzas/parwork) repo for a implementation of the collector.
 
-## Check out
+### Check out
 
 Head over to the [Github](https://github.com/mantzas/parwork) repo to see the code, with a working example, try it and if you find something, like a bug or a improvement, don't hesitate do open a issue or better yet create a PR.
 
