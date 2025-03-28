@@ -1,9 +1,9 @@
 ---
-title = "Parallelize work using parwork"
-description = "Parallelize work using the parwork package"
-keywords = ["parallel","go","fork-join"]
-categories = ["parallel","go","fork-join"]
-date = "2018-03-14T19:00:10+02:00"
+title: Parallelize work using parwork
+published: false
+tags: parallel, go, fork-join
+date: 20180314T19:00Z
+series: Go series
 ---
 
 In order to process a lot of work we have to parallelize work across all cores, and especially if it's CPU bound.
