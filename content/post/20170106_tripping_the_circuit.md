@@ -4,8 +4,8 @@ title: "Tripping the circuit"
 published: false
 tags: 'dotnet, go'
 series: Pattern series
-categories = ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
-keywords = ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
+categories: ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
+keywords: ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
 ---
 
 # Circuit breaker pattern
