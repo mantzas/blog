@@ -29,42 +29,48 @@ This is done in a abstracted way so the user has to provide implementation for:
 
 ### Work interface
 
-    type Work interface {
-        Do()
-        GetError() error
-        Result() interface{}
-    }
+```go
+type Work interface {
+    Do()
+    GetError() error
+    Result() interface{}
+}
+```
 
 The work interface defines a method `Do()` which contains all the processing logic of the work item. The `GetError() error` method can be used to flag the work item as failed and return a error. The `Result() interface{}` defines a method which returns the result of the work. Due to the lack of generics the data return has to be cast from `interface{}` to the actual result type in order to be usable in the WorkCollector.
 
 The following example work implementation shows a work item that calculates a MD5 hash of a string:
 
-    // md5Work defines a structure that holds the value to be hashed and the result of the hashing
-    type md5Work struct {
-        data   []byte
-        hashed []byte
-    }
+```go
+// md5Work defines a structure that holds the value to be hashed and the result of the hashing
+type md5Work struct {
+    data   []byte
+    hashed []byte
+}
 
-    // Do calculates the hash of the given value
-    func (gw *md5Work) Do() {
-        gw.data = md5.New().Sum(gw.hashed)
-    }
+// Do calculates the hash of the given value
+func (gw *md5Work) Do() {
+    gw.data = md5.New().Sum(gw.hashed)
+}
 
-    // GetError returns nil since the work does not fail
-    func (gw *md5Work) GetError() error {
-        return nil
-    }
+// GetError returns nil since the work does not fail
+func (gw *md5Work) GetError() error {
+    return nil
+}
 
-    // Result returns the hashed result
-    func (gw *md5Work) Result() interface{} {
-        return gw.data
-    }
+// Result returns the hashed result
+func (gw *md5Work) Result() interface{} {
+    return gw.data
+}
+```
 
 Check out the examples folder of the [Github](https://github.com/mantzas/parwork) repo for a complete example.
 
 ### WorkGenerator function
 
-    type WorkGenerator func() Work
+```go
+type WorkGenerator func() Work
+```
 
 The WorkGenerator function allows the user to provide a implementation that returns on each call a work item to be processed. If the generator returns nil the generation of work has finished.
 
@@ -72,7 +78,9 @@ Check out the examples folder of the [Github](https://github.com/mantzas/parwork
 
 ### WorkCollector function
 
-    type WorkCollector func(Work)
+```go
+type WorkCollector func(Work)
+```
 
 The WorkCollector function takes as a argument a completed Work item. It can check for a failure by calling the GetError or the Result method of the Work item and handle it appropriately.
 

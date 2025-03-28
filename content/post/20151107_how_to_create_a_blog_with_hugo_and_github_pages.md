@@ -12,6 +12,7 @@ keywords:
   - hugo
   - githubpages
 id: 2363547
+date: '2025-03-28T18:55:30Z'
 ---
 
 It was long my desire to write a blog with stuff that interests me.  
