@@ -12,6 +12,7 @@ keywords:
   - log
   - logging
 id: 2363415
+date: '2025-03-28T19:29:40Z'
 ---
 
 Almost every application logs data one way or another. There are a plethora of logging packages available for [golang](https://golang.org/).  

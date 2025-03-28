@@ -20,6 +20,7 @@ keywords:
   - go
   - csharp
 id: 2363389
+date: '2025-03-28T19:29:37Z'
 ---
 
 This is probably one of the most useful "cloud" patterns out there and it is fairly easy to implement.  

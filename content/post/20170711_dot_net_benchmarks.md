@@ -12,6 +12,7 @@ categories:
   - go
   - fork-join
 id: 2363390
+date: '2025-03-28T19:29:42Z'
 ---
 
 A lot of times i was wondering what is the best performing code.

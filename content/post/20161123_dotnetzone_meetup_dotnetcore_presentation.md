@@ -10,6 +10,7 @@ keywords:
   - dotnet
   - Linux
 id: 2363416
+date: '2025-03-28T19:29:39Z'
 ---
 
 The presentation was about the current state of .NET Core in the Linux World.

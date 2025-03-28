@@ -12,6 +12,7 @@ keywords:
   - eventsourcing
   - eventstore
 id: 2363552
+date: '2025-03-28T19:29:41Z'
 ---
 
 Event sourcing is capturing all changes of an application state as a sequence of events.

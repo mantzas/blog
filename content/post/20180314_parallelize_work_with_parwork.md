@@ -13,6 +13,7 @@ categories:
   - go
   - fork-join
 id: 2363383
+date: '2025-03-28T19:29:43Z'
 ---
 
 In order to process a lot of work we have to parallelize work across all cores, and especially if it's CPU bound.
