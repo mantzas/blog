@@ -1,13 +1,12 @@
-+++
-categories = ["go", "event sourcing", "event store", "library"]
-date = "2016-02-01T19:59:22+02:00"
-description = "New go event sourcing library named incata"
-keywords = ["go", "event sourcing", "event store", "library"]
-title = "New go event sourcing library named incata"
+---
 
-+++
-
-# incata, a event sourcing library for go
+title: "New go event sourcing library named incata"
+published: false
+tags: 'go, event sourcing, event store'
+series: Pattern series
+categories: ["go", "event sourcing", "event store"]
+keywords: ["go", "event sourcing", "event store"]
+---
 
 Event sourcing is capturing all changes of an application state as a sequence of events.
 Since we only store events we only have to add events to a store, in contrast to updates for keeping the application state.

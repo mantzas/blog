@@ -14,8 +14,6 @@ categories:
 id: 2363390
 ---
 
-# .NET Benchmarks
-
 A lot of times i was wondering what is the best performing code.
 In order to determine that i had to benchmark my code, but benchmarks are hard to write.
 Luckily there is a open source project that does this work perfectly good and very easy.

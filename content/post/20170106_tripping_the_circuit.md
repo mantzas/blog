@@ -22,8 +22,6 @@ keywords:
 id: 2363389
 ---
 
-# Circuit breaker pattern
-
 This is probably one of the most useful "cloud" patterns out there and it is fairly easy to implement.  
 There are great articles and implementations, like [Polly](https://github.com/App-vNext/Polly),
 already on the internet about this pattern so why another one?

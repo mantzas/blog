@@ -1,13 +1,12 @@
-+++
-categories = ["blog", "hugo", "github pages", "domain"]
-date = "2015-11-07T13:42:43+02:00"
-description = "How to create a blog with Hugo and Github Pages"
-keywords = ["blog", "hugo", "github pages", "domain"]
-title = "Setup a blog with Hugo and Github Pages"
+---
 
-+++
-
-# Intro
+title: "Setup a blog with Hugo and Github Pages"
+published: false
+tags: 'hugo, blog, github pages'
+series: Blogging series
+categories: ["blog", "hugo", "github pages"]
+keywords: ["blog", "hugo", "github pages"]
+---
 
 It was long my desire to write a blog with stuff that interests me.  
 Lately i was studying [Golang](https://golang.org/) and i came across [Hugo](https://gohugo.io/) which is a really nice and fast site generation utility.  
@@ -48,7 +47,7 @@ Download [Hugo](https://gohugo.io/) to your local drive. Unpack it to a folder a
 
 ### 4. Create blog
 
-* Create a folder for your blog source code and `cd` into it. 
+* Create a folder for your blog source code and `cd` into it.
 * Execute `hugo new site .`
 * Execute `git init`
 * Add as remote repository the repository created in Step 1. (`git remote add origin https://github.com/{username}/{repository}.git`)

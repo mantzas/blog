@@ -1,13 +1,12 @@
-+++
-categories = ["go", "logging", "logging", "library"]
-date = "2016-01-20T00:44:10+02:00"
-description = "Releasing new go logging library named adaptlog"
-keywords = ["go", "log", "logging", "library"]
-title = "Initial release of adaptlog"
+---
 
-+++
-
-# adaptlog, a logging abstraction for go
+title: "Initial release of adaptlog"
+published: false
+tags: 'go, log, logging'
+series: Go series
+categories: ["go", "log", "logging"]
+keywords: ["go", "log", "logging"]
+---
 
 Almost every application logs data one way or another. There are a plethora of logging packages available for [golang](https://golang.org/).  
 
