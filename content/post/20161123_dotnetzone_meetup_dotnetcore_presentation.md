@@ -1,6 +1,6 @@
 ---
 title: dotNETZone.gr meetup .NET core presentation
-published: false
+published: true
 tags: 'dotnet, linux'
 series: Dotnet series
 categories:

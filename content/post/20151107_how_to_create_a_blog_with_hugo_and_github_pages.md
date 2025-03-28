@@ -1,6 +1,6 @@
 ---
 title: Setup a blog with Hugo and Github Pages
-published: false
+published: true
 tags: 'hugo, blog, githubpages'
 series: Blogging series
 categories:

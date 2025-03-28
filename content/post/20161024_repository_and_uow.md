@@ -1,6 +1,6 @@
 ---
 title: The Repository and Unit of Work pattern
-published: false
+published: true
 tags: 'repository, unitofwork, pattern'
 series: Pattern series
 categories:

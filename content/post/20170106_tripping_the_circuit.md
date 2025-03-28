@@ -1,6 +1,6 @@
 ---
 title: Tripping the circuit
-published: false
+published: true
 tags: 'dotnet, go'
 series: Pattern series
 categories:

@@ -1,6 +1,6 @@
 ---
 title: New go event sourcing library named incata
-published: false
+published: true
 tags: 'go, eventsourcing, eventstore'
 series: Pattern series
 categories:

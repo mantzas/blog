@@ -1,7 +1,7 @@
 ---
 title: Parallelize work using parwork
 description: Parallelize work using the parwork package
-published: false
+published: true
 tags: 'parallel, go'
 series: Go series
 keywords:

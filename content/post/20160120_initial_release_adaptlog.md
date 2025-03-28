@@ -1,6 +1,6 @@
 ---
 title: Initial release of adaptlog
-published: false
+published: true
 tags: 'go, log, logging'
 series: Go series
 categories:

@@ -1,6 +1,6 @@
 ---
 title: Various .NET Benchmarks
-published: false
+published: true
 tags: 'dotnet, benchmark'
 series: Dotnet series
 keywords:
