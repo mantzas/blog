@@ -29,6 +29,8 @@ already on the internet about this pattern so why another one?
 > Κρείττον οψιμαθή είναι ή αμαθή.  
 > Socrates 469-399 BC., Philosopher
 
+Which translates to:
+
 > Better too have learned lately than never, as he tried to explain why he learned to play
 > guitar in his old age.
 

@@ -50,11 +50,13 @@ Reading different sources ([MSDN The Repository Pattern](https://msdn.microsoft.
 
 A simple example is the following application repository(C#):
 
-    public interface IApplicationRepository
-    {
-        Task DeleteAsync(int id);
-        Task<ApplicationModel> GetAsync(int id);
-    }
+```csharp
+public interface IApplicationRepository
+{
+    Task DeleteAsync(int id);
+    Task<ApplicationModel> GetAsync(int id);
+}
+```
 
 By providing an interface we can leave the implementation up top the developer to choose the data access library they wish.
 The argument and return values of this interface should be domain specific objects and not the data objects to avoid spilling the data
@@ -84,11 +86,13 @@ So the UoW (Unit of Work) is responsible for keeping the db object (SqlConnectio
 
 A simple interface (C#) that has to be implemented is the following:
 
-    public interface IUnitOfWork : IDisposable
-    {
-        IApplicationRepository Applications { get; }
-        Task CommitAsync();
-    }
+```csharp
+public interface IUnitOfWork : IDisposable
+{
+    IApplicationRepository Applications { get; }
+    Task CommitAsync();
+}
+```
 
 This is just a wrapper around our db object (SqlConnection, DbContext etc) and the implementation of the commit.
 When we have a UoW we have at our hands all the necessary repositories, so interacting with them is really easy.
@@ -97,63 +101,69 @@ When we have a UoW we have at our hands all the necessary repositories, so inter
 
 Now we have the the following implementation for the application repository
 
-    public class ApplicationRepository : IDataAccess<ApplicationDbModel>, 
-                                         IApplicationRepository
+```csharp
+public class ApplicationRepository : IDataAccess<ApplicationDbModel>, 
+                                        IApplicationRepository
+{
+    public ApplicationRepository(DbContext dbContext, IMapper mapper) : 
+        base(dbContext, mapper)
     {
-        public ApplicationRepository(DbContext dbContext, IMapper mapper) : 
-            base(dbContext, mapper)
-        {
-        }
-
-        public Task DeleteAsync(int id) => base.DeleteAsync(id);
-
-        public async Task<ApplicationModel> GetAsync(int id)
-        {
-                var application = await GetAll()
-                            .Where(p => p.Id == id)
-                            .SingleOrDefaultAsync();
-                return mapper<ApplicationModel>(application);
-        }
     }
+
+    public Task DeleteAsync(int id) => base.DeleteAsync(id);
+
+    public async Task<ApplicationModel> GetAsync(int id)
+    {
+            var application = await GetAll()
+                        .Where(p => p.Id == id)
+                        .SingleOrDefaultAsync();
+            return mapper<ApplicationModel>(application);
+    }
+}
+```
 
 Where the base repository is a EF implementation of the following interface:
 
-    public interface IDataAccess<T> where T : class
-    {
-        IQueryable<T> GetAll();
-        Task<T> GetByIdAsync(params object[] keyValues);
-        void Add(T entity);
-        void Update(T entity);
-        void Delete(T entity);
-        Task DeleteAsync(params object[] keyValues);
-    }
+```csharp
+public interface IDataAccess<T> where T : class
+{
+    IQueryable<T> GetAll();
+    Task<T> GetByIdAsync(params object[] keyValues);
+    void Add(T entity);
+    void Update(T entity);
+    void Delete(T entity);
+    Task DeleteAsync(params object[] keyValues);
+}
+```
 
 It is fairly easy to implementing another data access library. A dapper implementation of the application repository has
 as constructor parameter a SqlConnection and the actual implementation of the interface methods. That’s it.
 
 The unit of work implementation is the following:
 
-    public sealed class UnitOfWork : IUnitOfWork
+```csharp
+public sealed class UnitOfWork : IUnitOfWork
+{
+    private readonly IMapper _mapper;
+    private DbContext _dbContext;
+
+    public UnitOfWork(DbContext dbContext, IMapper mapper)
     {
-        private readonly IMapper _mapper;
-        private DbContext _dbContext;
-
-        public UnitOfWork(DbContext dbContext, IMapper mapper)
-        {
-            _dbContext= dbContext;
-            _mapper = mapper;
-        }
-            
-        public Task<int> CommitAsync()
-        {
-            return _dbContext.SaveChangesAsync();
-        }
-
-        public IApplicationRepository Applications => 
-            new ApplicationRepository(_dbContext, _mapper);
-            
-        //Implement IDisposable
+        _dbContext= dbContext;
+        _mapper = mapper;
     }
+        
+    public Task<int> CommitAsync()
+    {
+        return _dbContext.SaveChangesAsync();
+    }
+
+    public IApplicationRepository Applications => 
+        new ApplicationRepository(_dbContext, _mapper);
+        
+    //Implement IDisposable
+}
+```
 
 This is a simple implementation of the UoW. Do not mind that some features are missing like transaction handling
 (DbContext.Database.BeginTransaction() and then commit or rollback) a repository factory etc which are fairly easy to implement.
@@ -162,12 +172,14 @@ And how is this used?
 
 Let’s assume we have a Unit Of Work Factory implemented so the code would be:
 
-    using (var uow = _unitOfWorkFactory.Create())
-    {
-        var application = await uow.Applications.GetAsync(1, 1);
-        await uow.Applications.DeleteAsync(application.Id);
-        await uow.CommitAsync();
-    }
+```csharp
+using (var uow = _unitOfWorkFactory.Create())
+{
+    var application = await uow.Applications.GetAsync(1, 1);
+    await uow.Applications.DeleteAsync(application.Id);
+    await uow.CommitAsync();
+}
+```
 
 Easy and clean, isn’t it? Everything is in one place, at the end it get’s committed and properly disposed.
 Since EF exposes the connection through the DbContext we can actually use Dapper also and have a mixed data access layer repository
