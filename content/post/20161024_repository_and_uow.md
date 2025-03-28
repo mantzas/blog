@@ -2,10 +2,10 @@
 
 title: The Repository and Unit of Work pattern
 published: false
-tags: 'repository, unit or work, pattern, data access'
+tags: 'repository, unit-of-work, pattern'
 series: Pattern series
-categories: ["repository", "unit of work", "pattern", "data access"]
-keywords: ["repository", "unit of work", "pattern", "data access"]
+categories: ["repository", "unit-of-work", "pattern"]
+keywords: ["repository", "unit-of-work", "pattern"]
 ---
 
 Yes, i know not this again. Is this not the one millionth time that someone blogs about that?

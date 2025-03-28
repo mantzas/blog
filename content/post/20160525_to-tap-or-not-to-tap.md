@@ -1,11 +1,15 @@
 ---
-
 title: TT || !TT aka To TAP or not to TAP
 published: false
 tags: 'dotnet, TAP'
 series: Dotnet series
-categories: ["dotnet", "TAP"]
-keywords: ["dotnet", "TAP"]
+categories:
+  - dotnet
+  - TAP
+keywords:
+  - dotnet
+  - TAP
+id: 2363538
 ---
 
 Ramblings on Tasks, async-await and ASP.NET. The [slides](https://goo.gl/sO3ZGv) from the [meetup](http://www.meetup.com/DotNetZone/events/231198572/)

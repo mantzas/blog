@@ -2,10 +2,10 @@
 
 title: New go event sourcing library named incata
 published: false
-tags: 'go, event sourcing, event store'
+tags: 'go, event-sourcing, event-store'
 series: Pattern series
-categories: ["go", "event sourcing", "event store"]
-keywords: ["go", "event sourcing", "event store"]
+categories: ["go", "event-sourcing", "event-store"]
+keywords: ["go", "event-sourcing", "event-store"]
 ---
 
 Event sourcing is capturing all changes of an application state as a sequence of events.

@@ -2,10 +2,10 @@
 
 title: Setup a blog with Hugo and Github Pages
 published: false
-tags: 'hugo, blog, github pages'
+tags: 'hugo, blog, github-pages'
 series: Blogging series
-categories: ["blog", "hugo", "github pages"]
-keywords: ["blog", "hugo", "github pages"]
+categories: ["blog", "hugo", "github-pages"]
+keywords: ["blog", "hugo", "github-pages"]
 ---
 
 It was long my desire to write a blog with stuff that interests me.  
