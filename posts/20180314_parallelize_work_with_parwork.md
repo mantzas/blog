@@ -1,10 +1,9 @@
 ---
-
 title: Parallelize work using parwork
 id: 2363319
 published: false
-tags: parallel, go
-date: 20180314T19:00Z
+tags: 'parallel, go'
+date: '20180314T19:00Z'
 series: Go series
 ---
 
