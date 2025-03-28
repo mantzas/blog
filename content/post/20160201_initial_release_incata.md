@@ -1,6 +1,6 @@
 ---
 
-title: "New go event sourcing library named incata"
+title: New go event sourcing library named incata
 published: false
 tags: 'go, event sourcing, event store'
 series: Pattern series

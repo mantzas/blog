@@ -1,6 +1,6 @@
 ---
 
-title: "The Repository and Unit of Work pattern"
+title: The Repository and Unit of Work pattern
 published: false
 tags: 'repository, unit or work, pattern, data access'
 series: Pattern series

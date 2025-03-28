@@ -1,6 +1,6 @@
 ---
 
-title: "TT || !TT aka To TAP or not to TAP"
+title: TT || !TT aka To TAP or not to TAP
 published: false
 tags: 'dotnet, TAP'
 series: Dotnet series

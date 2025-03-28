@@ -1,6 +1,6 @@
 ---
 
-title: "Setup a blog with Hugo and Github Pages"
+title: Setup a blog with Hugo and Github Pages
 published: false
 tags: 'hugo, blog, github pages'
 series: Blogging series
