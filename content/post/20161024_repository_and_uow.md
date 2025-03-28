@@ -4,8 +4,8 @@ title: The Repository and Unit of Work pattern
 published: false
 tags: 'repository, unit-of-work, pattern'
 series: Pattern series
-categories: ["repository", "unit-of-work", "pattern"]
-keywords: ["repository", "unit-of-work", "pattern"]
+categories: ["repository", "unit_of_work", "pattern"]
+keywords: ["repository", "unit_of_work", "pattern"]
 ---
 
 Yes, i know not this again. Is this not the one millionth time that someone blogs about that?
