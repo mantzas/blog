@@ -1,11 +1,17 @@
 ---
-
 title: The Repository and Unit of Work pattern
 published: false
-tags: 'repository, unit-of-work, pattern'
+tags: 'repository, unitofwork, pattern'
 series: Pattern series
-categories: ["repository", "unit_of_work", "pattern"]
-keywords: ["repository", "unit_of_work", "pattern"]
+categories:
+  - repository
+  - unitofwork
+  - pattern
+keywords:
+  - repository
+  - unitofwork
+  - pattern
+id: 2363551
 ---
 
 Yes, i know not this again. Is this not the one millionth time that someone blogs about that?
