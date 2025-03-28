@@ -30,4 +30,7 @@ jobs:
                 conventional_commits: false
                 # (Optional) Do not make actual changes on dev.to.
                 dry_run: false
+              env:
+                GIT_COMMITTER_NAME: mantzas
+                GIT_COMMITTER_EMAIL: smantziaris@gmail.com
             
