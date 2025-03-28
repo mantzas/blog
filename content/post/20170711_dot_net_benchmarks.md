@@ -27,34 +27,38 @@ The only thing you have to do is:
 
 The following code is needed in the Program Main
 
-     public static void Main(string[] args)
-     {
-         BenchmarkSwitcher.FromAssembly(typeof(Program)
-                          .GetTypeInfo().Assembly).Run(args);
-     }
+```csharp
+public static void Main(string[] args)
+{
+    BenchmarkSwitcher.FromAssembly(typeof(Program)
+                    .GetTypeInfo().Assembly).Run(args);
+}
+```
 
 which will scan the assembly for benchmarks and asks you which one to run.
 
 A typical benchmark is just a class with methods that are annotated with the `[Benchmark]` attribute like the following one:
 
-    [MemoryDiagnoser]
-    public class DateTimeToStringBenchmark
+```csharp
+[MemoryDiagnoser]
+public class DateTimeToStringBenchmark
+{
+    private static readonly DateTime _dateTime = 
+        new DateTime(2016, 12, 31, 23, 59, 59, 999);
+    
+    [Benchmark(Baseline = true, Description = "DateTime ToString")]
+    public string DateTimeToString()
     {
-        private static readonly DateTime _dateTime = 
-            new DateTime(2016, 12, 31, 23, 59, 59, 999);
-        
-        [Benchmark(Baseline = true, Description = "DateTime ToString")]
-        public string DateTimeToString()
-        {
-            return _dateTime.ToString();
-        }
-
-        [Benchmark(Description = "DateTime ToString with format")]
-        public string DateTimeToStringFormat()
-        {
-            return _dateTime.ToString("g");
-        }
+        return _dateTime.ToString();
     }
+
+    [Benchmark(Description = "DateTime ToString with format")]
+    public string DateTimeToStringFormat()
+    {
+        return _dateTime.ToString("g");
+    }
+}
+```
 
 Pretty simple isn't it?
 
