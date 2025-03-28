@@ -1,15 +1,16 @@
 ---
 
-title:  "Various .NET Benchmarks"
-categories: ["dotnet", "benchmarks"]
-description: "Various .NET Benchmarks"
-keywords: ["dotnet", "benchmark"]
-date: 2017-07-11T07:36:33+03:00
+title: "Various .NET Benchmarks"
+published: false
+tags: 'dotnet, benchmark'
+series: Dotnet series
+keywords: ["parallel","go","fork-join"]
+categories: ["parallel","go","fork-join"]
 ---
 
 # .NET Benchmarks
 
-A lot of times i was wondering what is the best performing code. 
+A lot of times i was wondering what is the best performing code.
 In order to determine that i had to benchmark my code, but benchmarks are hard to write.
 Luckily there is a open source project that does this work perfectly good and very easy.
 
@@ -72,7 +73,7 @@ I get the timings of the method and by using the `[MemoryDiagnoser]` attribute i
 Given the easiness to create such benchmark i have started a github repository named [DotNetBenchmarks](https://github.com/mantzas/DotNetBenchmarks).
 
 There you can find some of the performance questions that i have about some components like logging frameworks, XML Serialization, String concatenation etc.
-Every time i have to check the performance of some component i will add a new benchmark to this repository. If anyone likes to contribute, even better! 
+Every time i have to check the performance of some component i will add a new benchmark to this repository. If anyone likes to contribute, even better!
 Make a PR!
 
 Please note that:

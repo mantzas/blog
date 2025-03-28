@@ -1,22 +1,23 @@
-+++
-title = "Tripping the circuit"
-categories = ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
-description = "Circuit Breaker pattern implementation in go and c#"
-keywords = ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
-date = "2017-01-06T13:11:25+02:00"
+---
 
-+++
+title: "Tripping the circuit"
+published: false
+tags: 'dotnet, go'
+series: Pattern series
+categories = ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
+keywords = ["pattern", "cloud", "design", "dotnet", "dotnet core", "go", "csharp"]
+---
 
 # Circuit breaker pattern
 
 This is probably one of the most useful "cloud" patterns out there and it is fairly easy to implement.  
-There are great articles and implementations, like [Polly](https://github.com/App-vNext/Polly), 
-already on the internet about this pattern so why another one? 
+There are great articles and implementations, like [Polly](https://github.com/App-vNext/Polly),
+already on the internet about this pattern so why another one?
 
 > Κρείττον οψιμαθή είναι ή αμαθή.  
 > Socrates 469-399 BC., Philosopher
 
-> Better too have learned lately than never, as he tried to explain why he learned to play 
+> Better too have learned lately than never, as he tried to explain why he learned to play
 > guitar in his old age.
 
 I have learned better by reading, implementing and writing about something so stick with me.
@@ -35,9 +36,9 @@ The reasons:
 
 When this happen our system becomes unstable, unreliable, brittle and failures cascade.
 
-Let's go with an example of a failing remote service, let's say we have the following scenario 
+Let's go with an example of a failing remote service, let's say we have the following scenario
 
-- the remote service times out after 60sec 
+- the remote service times out after 60sec
 - our service gets 30 req/s
 - the usual response time is 1s  
 - each request takes up 1MB of RAM
@@ -63,7 +64,7 @@ The circuit is actually a state machine with 3 states
 
 - Closed, meaning the execution will proceed
 - Open, meaning the execution will not proceed and throw a exception or return an error (implementation specific)
-- Half-Open, meaning that some executions are allowed after some time in order to check the remote service 
+- Half-Open, meaning that some executions are allowed after some time in order to check the remote service
 and open or close the circuit based on the response
 
 For deeper knowledge on the pattern please read the following excellent articles
@@ -80,18 +81,18 @@ By using a circuit breaker we have the following benefits:
 - Save server resources
 - Maintain response times (SLA)
 - Handle failures differently when the circuit opens eg
-    - Redirect to another resources
-    - Save for later retry
-    - etc
+  - Redirect to another resources
+  - Save for later retry
+  - etc
 
 ## Implementation
 
-There are two implementation of the circuit breaker. 
+There are two implementation of the circuit breaker.
 They share the same philosophy but are written in C# and Go.
-Both implementations have a setting provider interface which can be implemented 
-in order to get the settings from anywhere. There is a in-memory settings implementation which 
-holds the settings in memory. 
-Both implementation are key based which means that for every key 
+Both implementations have a setting provider interface which can be implemented
+in order to get the settings from anywhere. There is a in-memory settings implementation which
+holds the settings in memory.
+Both implementation are key based which means that for every key
 the implementation provides a separate circuit which is actually the state.
 The following setting exist for each key:
 
@@ -112,7 +113,6 @@ so type casting is necessary
 
 ## Epilogue
 
-My [blog](http://github.com/mantzas/blog) is hosted in github so for any change, improvement or fix 
+My [blog](http://github.com/mantzas/blog) is hosted in github so for any change, improvement or fix
 you can either open a issue or submit a pull request.  
 The same goes for both implementations.
-
