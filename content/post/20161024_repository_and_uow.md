@@ -78,11 +78,13 @@ So the UoW (Unit of Work) is responsible for keeping the db object (SqlConnectio
 
 A simple interface (C#) that has to be implemented is the following:
 
+    ```csharp
     public interface IUnitOfWork : IDisposable
     {
         IApplicationRepository Applications { get; }
         Task CommitAsync();
     }
+    ```
 
 This is just a wrapper around our db object (SqlConnection, DbContext etc) and the implementation of the commit.
 When we have a UoW we have at our hands all the necessary repositories, so interacting with them is really easy.
@@ -91,6 +93,7 @@ When we have a UoW we have at our hands all the necessary repositories, so inter
 
 Now we have the the following implementation for the application repository
 
+    ```csharp
     public class ApplicationRepository : IDataAccess<ApplicationDbModel>, 
                                          IApplicationRepository
     {
@@ -109,10 +112,12 @@ Now we have the the following implementation for the application repository
                 return mapper<ApplicationModel>(application);
         }
     }
+    ```
 
 Where the base repository is a EF implementation of the following interface:
 
- public interface IDataAccess<T> where T : class
+    ```csharp
+    public interface IDataAccess<T> where T : class
     {
         IQueryable<T> GetAll();
         Task<T> GetByIdAsync(params object[] keyValues);
@@ -121,12 +126,14 @@ Where the base repository is a EF implementation of the following interface:
         void Delete(T entity);
         Task DeleteAsync(params object[] keyValues);
     }
+    ```
 
 It is fairly easy to implementing another data access library. A dapper implementation of the application repository has
 as constructor parameter a SqlConnection and the actual implementation of the interface methods. That’s it.
 
 The unit of work implementation is the following:
 
+    ```csharp
     public sealed class UnitOfWork : IUnitOfWork
     {
         private readonly IMapper _mapper;
@@ -148,6 +155,7 @@ The unit of work implementation is the following:
             
         //Implement IDisposable
     }
+    ```
 
 This is a simple implementation of the UoW. Do not mind that some features are missing like transaction handling
 (DbContext.Database.BeginTransaction() and then commit or rollback) a repository factory etc which are fairly easy to implement.
@@ -156,12 +164,14 @@ And how is this used?
 
 Let’s assume we have a Unit Of Work Factory implemented so the code would be:
 
+    ```csharp
     using (var uow = _unitOfWorkFactory.Create())
     {
         var application = await uow.Applications.GetAsync(1, 1);
         await uow.Applications.DeleteAsync(application.Id);
         await uow.CommitAsync();
     }
+    ```
 
 Easy and clean, isn’t it? Everything is in one place, at the end it get’s committed and properly disposed.
 Since EF exposes the connection through the DbContext we can actually use Dapper also and have a mixed data access layer repository
