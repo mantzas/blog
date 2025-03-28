@@ -1,11 +1,17 @@
 ---
-
-title: "Various .NET Benchmarks"
+title: Various .NET Benchmarks
 published: false
 tags: 'dotnet, benchmark'
 series: Dotnet series
-keywords: ["parallel","go","fork-join"]
-categories: ["parallel","go","fork-join"]
+keywords:
+  - parallel
+  - go
+  - fork-join
+categories:
+  - parallel
+  - go
+  - fork-join
+id: 2363390
 ---
 
 # .NET Benchmarks
