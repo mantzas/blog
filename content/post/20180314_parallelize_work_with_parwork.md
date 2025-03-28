@@ -1,11 +1,18 @@
 ---
-title: "Parallelize work using parwork"
-description: "Parallelize work using the parwork package"
+title: Parallelize work using parwork
+description: Parallelize work using the parwork package
 published: false
 tags: 'parallel, go'
 series: Go series
-keywords: ["parallel","go","fork-join"]
-categories: ["parallel","go","fork-join"]
+keywords:
+  - parallel
+  - go
+  - fork-join
+categories:
+  - parallel
+  - go
+  - fork-join
+id: 2363383
 ---
 
 In order to process a lot of work we have to parallelize work across all cores, and especially if it's CPU bound.
