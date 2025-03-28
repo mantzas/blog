@@ -1,11 +1,10 @@
 ---
 title: Parallelize work using parwork
 id: 2363319
-published: false
+published: true
 tags: 'parallel, go'
 date: '20180314T19:00Z'
 series: Go series
-published: true
 ---
 
 In order to process a lot of work we have to parallelize work across all cores, and especially if it's CPU bound.
