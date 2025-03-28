@@ -1,11 +1,3 @@
----
-title: Parallelize work using parwork
-published: false
-tags: parallel, go, fork-join
-date: 20180314T19:00Z
-series: Go series
----
-
 # Intro
 
 In order to process a lot of work we have to parallelize work across all cores, and especially if it's CPU bound.
