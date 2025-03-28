@@ -1,3 +1,7 @@
+---
+title: Parallelize work using parwork
+---
+
 # Intro
 
 In order to process a lot of work we have to parallelize work across all cores, and especially if it's CPU bound.
