@@ -64,15 +64,10 @@ Pretty simple isn't it?
 
 After the run the result is the following:
 
-<table>
-    <thead>
-        <tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Scaled</th><th>ScaledSD</th><th>Gen 0</th><th>Gen 1</th><th>Allocated</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>'DateTime ToString'</td><td>848.8 ns</td><td>2.8059 ns</td><td>2.4874 ns</td><td>1.00</td><td>0.00</td><td>0.0410</td><td>-</td><td>132 B</td></tr>
-        <tr><td> 'DateTime ToString with format'</td><td>790.0 ns</td><td>18.0956 ns</td><td>16.0413 ns</td><td>0.93</td><td>0.02</td><td>0.0391</td><td>0.0104</td><td>124 B</td></tr>
-    </tbody>
-</table>
+| Method                        | Mean     | Error     | StdDev    | Scaled | ScaledSD | Gen 0   | Gen 1   | Allocated |
+|-------------------------------|----------|-----------|-----------|--------|----------|---------|---------|-----------|
+| 'DateTime ToString'           | 848.8 ns | 2.8059 ns | 2.4874 ns | 1.00   | 0.00     | 0.0410  | -       | 132 B     |
+| 'DateTime ToString with format' | 790.0 ns | 18.0956 ns | 16.0413 ns | 0.93   | 0.02     | 0.0391  | 0.0104  | 124 B     |
 
 I get the timings of the method and by using the `[MemoryDiagnoser]` attribute i get event the GC Stats.
 
