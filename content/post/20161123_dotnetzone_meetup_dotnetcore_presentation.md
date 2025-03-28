@@ -1,11 +1,15 @@
 ---
-
-title: "dotNETZone.gr meetup .NET core presentation"
+title: dotNETZone.gr meetup .NET core presentation
 published: false
 tags: 'dotnet, linux'
 series: Dotnet series
-categories: ["dotnet", "linux"]
-keywords: ["dotnet", "Linux"]
+categories:
+  - dotnet
+  - linux
+keywords:
+  - dotnet
+  - Linux
+id: 2363416
 ---
 
 The presentation was about the current state of .NET Core in the Linux World.

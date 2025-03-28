@@ -1,11 +1,17 @@
 ---
-
-title: "Initial release of adaptlog"
+title: Initial release of adaptlog
 published: false
 tags: 'go, log, logging'
 series: Go series
-categories: ["go", "log", "logging"]
-keywords: ["go", "log", "logging"]
+categories:
+  - go
+  - log
+  - logging
+keywords:
+  - go
+  - log
+  - logging
+id: 2363415
 ---
 
 Almost every application logs data one way or another. There are a plethora of logging packages available for [golang](https://golang.org/).  
