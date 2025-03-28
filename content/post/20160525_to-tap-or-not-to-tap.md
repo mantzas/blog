@@ -9,7 +9,6 @@ categories:
 keywords:
   - dotnet
   - TAP
-id: 2363538
 ---
 
 Ramblings on Tasks, async-await and ASP.NET. The [slides](https://goo.gl/sO3ZGv) from the [meetup](http://www.meetup.com/DotNetZone/events/231198572/)
